@@ -1,232 +1,49 @@
 {
+  "museumName": "Triển Lãm 3D UTC",
+  "version": "2.0.0",
+  "lastUpdated": "2026-05-06",
   "exhibits": [
     {
-      "id": "Vách Lịch Sử",
-      "title": "VÁCH LỊCH SỬ VÀ THÀNH TÍCH 80 NĂM MAY 10",
+      "id": "Exhibit_1",
+      "order": 1,
+      "isPublished": true,
+      "category": "Lịch Sử 1945-1954",
+      "name": "Tên Hiện Vật 1",
+      "description": "Mô tả ngắn hiện vật số 1.",
+      "imageUrl": "Assets/StreamingAssets/UTC/1945-1954/1945_Bac_Ho_doc_tuyen_ngon_Doc_ap_2_9.jpg",
+      "subImages": [
+        "https://your-cloudinary.com/exhibits/exhibit_01_sub1.jpg",
+        "https://your-cloudinary.com/exhibits/exhibit_01_sub2.jpg"
+      ],
+      "audioUrl": "",
+      "tags": [
+        "lịch sử",
+        "1945"
+      ],
       "pages": [
-        { "imageUrl": "1. 1946 - Xuong X1 (1946-1952)/1.1.jpg",
-          "description": "Từ những ngày đầu thành lập trong kháng chiến, tự nhuộm vải bằng lá và vỏ cây rừng phục vụ chiến sĩ." },
-        { "imageUrl": "1. 1946 - Xuong X1 (1946-1952)/1.2.jpg",
-          "description": "Ban chấp hành Xí ủy May 10 khi mới hợp nhất" },
-        { "imageUrl": "1. 1946 - Xuong X1 (1946-1952)/1.3.jpg",
-          "description": "Tổ sản xuất đầu tiên của Xưởng May 1 tại chiến khu Việt Bắc" },
-        { "imageUrl": "1. 1946 - Xuong X1 (1946-1952)/1.4.jpg",
-          "description": "Các đồng chí công nhân quốc phòng xưởng X40- Thanh Hóa" },
-        { "imageUrl": "1. 1946 - Xuong X1 (1946-1952)/1.5.jpg", 
-          "description": "Xưởng nhận nhiệm vụ tại Hội nghị quân nhu Liên khu III tại đình làng Quán Bửu- Vĩnh Lộc, Thanh Hóa" },
-        { "imageUrl": "2. 1952 - Xuong May 10/1 ANH TO- Xuong X10 phuc vu chien dich DBP.jpg",
-          "description": "Xưởng X10 phục vụ chiến dịch Điên Biên Phủ" },
-        { "imageUrl": "2. 1952 - Xuong May 10/2.Cong nhan cong truong 17 truoc khi ve XM M1.jpg", 
-          "description": "Những công nhân của công trường 17 trước khi về công tác tại xưởng may M1" },
-        { "imageUrl": "2. 1952 - Xuong May 10/3. CN mien Nam tap ket ve X10 nam 1954 .jpg",
-          "description": "Công nhân miền Nam tập kết về X10 năm 1954" },
-        { "imageUrl": "2. 1952 - Xuong May 10/4. Doi bong chuyen cua xuong 40 1952.jpg",
-          "description": "Đội bóng chuyền của Xưởng 40 (năm 1952)" },
-        { "imageUrl": "2. 1952 - Xuong May 10/5.Buoi tap hop sat nhap xuong x40 thanh hoa va xuong x45 nghe an nam 1952.jpg",
-          "description": "Buổi tập hợp sáp nhập xưởng X40 Thanh Hóa và xưởng X45 Nghệ An năm 1952" },
-        { "imageUrl": "3. 1956 - Chuyen ve Ha Noi (anh gd 1956-1960)/1. ANH TO Cong xuong X 10 .jpg", 
-          "description": "Cổng ra vào Xí nghiệp May 10 khi chuyển về Gia Lâm Hà Nội" },
-        { "imageUrl": "3. 1956 - Chuyen ve Ha Noi (anh gd 1956-1960)/2.Day chuyen nc chay 1958.jpg", 
-          "description": "Dây chuyền nước chảy Xưởng May 10  năm 1958" },
-        { "imageUrl": "3. 1956 - Chuyen ve Ha Noi (anh gd 1956-1960)/3. To sx.jpg",
-          "description": "Một tổ sản xuất giai đoạn đầu của xưởng X1 (trước khi sáp nhập thành xưởng X10) tại chiến khu Việt Bắc sau năm 1950" },
-        { "imageUrl": "3. 1956 - Chuyen ve Ha Noi (anh gd 1956-1960)/4.PX may 3 SX theo day chuyen tu do  nam 1959.jpg",
-          "description": "Phân xưởng May 3 – Xưởng May 10 sản xuất theo dây chuyền “Tự do” năm 1959" },
-        { "imageUrl": "3. 1956 - Chuyen ve Ha Noi (anh gd 1956-1960)/5.Dao cat bang tay nam  1956.jpg", 
-          "description": "Dao cắt bằng tay năm 1956" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/1. ANH TO Bac Ho.jpg", 
-          "description": "Xưởng May 10 vinh dự được đón Bác Hồ về thăm ngày 08/01/1959" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/2. Bac tham CN may.jpg", 
-          "description": "Bác Hồ thăm phân xưởng may 1 - Xưởng May 10 ngày 08/01/1959" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/3.Bac noi chuyen voi CBCNV X10 tai hoi truong nha an.jpg", 
-          "description": "Bác Hồ nói chuyện với công nhân, chiến sỹ, nhân viên và cán bộ Xưởng May 10 ngày 08/01/1959" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/4. Co thi dua tien tien Bac Ho trao tang nam 1960.jpg", 
-          "description": "Cờ thi đua tiền tiến Bác Hồ tặng Xưởng May 10 năm 1960" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/Ruoc co thi dua tien tien cua Bac Ho trao tang nam 1960.jpg", 
-          "description": "Rước cờ thi đua tiên tiến của Bác Hồ trao tặng năm 1960" },
-        { "imageUrl": "4. 1959 - Vinh du don Bac Ho ve tham/Vinh du nhan co cua Bac Ho nam 1960.jpg", 
-          "description": "Xưởng May 10 đón nhận cờ thi đua tiền tiến do Bác Hồ trao tặng năm 1960" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/1. ANH TO -Cong Xi nghiep May 10 .jpg",
-          "description": "Cổng ra vào sau khi đổi tên Xưởng May 10 thành Xí nghiệp May 10  năm 1961" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/3.Chu tich UBND thanh pho HN Tran Duy Hung tham May 10 nam 1974.jpg",
-          "description": "Chủ tịch UBND thành phố Hà Nội Trần Duy Hưng thăm Xí nghiệp May 10 năm 1974" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/6.Doan CBCNV xuat sac cua May 10 vao lang vieng Bac 1981.jpg",
-          "description": "Đoàn CBCNV xuất sắc của Xí nghiệp May 10 vào Lăng viếng Bác năm 1981" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/8. Day chuyen tu dong nam 1961.jpg",
-          "description": "Dây chuyền tự động năm 1961" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/10. Truong day nghe nhung nam thuoc thap ky 80.jpg", 
-          "description": "Trường Dạy nghề (tiền thân của Trường Cao đẳng nghề Long Biên) những năm 80" },
-        { "imageUrl": "5. 1961- Xi nghiep May 10 (1961-1991)/11. Nha tap the M10 nam 61.jpg", 
-          "description": "Khu nhà tập thể May 10 năm 1961" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/1. ANH TO-Khai truong Cong ty May 10 nam 1992.jpg",
-          "description": "Tháng 11/1992, Xí nghiệp May 10 đổi tên thành Công ty May 10" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/12.khai truong cua hang so 6 le thanh tong thang 4.1993.jpg",
-          "description": "Năm 1993, May 10 khai trương cửa hàng giới thiệu sản phẩm tại Hà Nội" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/2. Phan thuong/5. Doc lap hang nhat nam LAN t1 NAM  2002.JPG",
-          "description": "Công ty May 10 đón nhận Huân chương Độc lập hạng Nhất lần thứ 1 ngày 01/02/2002" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/2. Phan thuong/7. Tong cong ty nhan giai thương chat luong chau a TBD 2002.JPG",
-          "description": "May 10 nhận giải thưởng Chất lượng Châu Á – Thái Bình Dương ngày 19/12/2002" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/3. Lanh dao tham/9. Ong Do Muoi 1995.jpg",
-          "description": "Tổng Bí thư Đỗ Mười thăm Công ty May 10 ngày 28/01/1995" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/3. Lanh dao tham/10. Le Kha Phieu 1998.jpg",
-          "description": "Tổng Bí thư Lê Khả Phiêu thăm Công ty May 10 ngày 27/8/1998" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/4. Cac XNDP/16. Ha quang 2003.jpg",
-          "description": "Lễ khởi công xây dựng XN may Xuất khẩu Hà Quảng năm 2003" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/4. Cac XNDP/18. Le ban giao Dong Hung.jpg",
-          "description": "Lễ bàn giao Công ty may XK Đông Hưng về May 10 năm 1998" },
-        { "imageUrl": "6. 1992- Cong ty May 10 (1992-2004)/4. Cac XNDP/19. Khanh thanh XK Hung Ha.JPG",
-          "description": "Lễ khánh thành nhà sản xuất Xí nghiệp may xuất khẩu Hưng Hà năm 2001" },
-        { "imageUrl": "7. 2005- Cong ty CP May 10 (2005-2010)/5. Khanh thanh Xuong VT.JPG",
-          "description": "Công ty CP May 10 khánh thành XN Veston 1 và Veston 2 năm 2005" },
-        { "imageUrl": "7. 2005- Cong ty CP May 10 (2005-2010)/6.Khai truong cua hang may do vest so 1 nam 2008.jpg",
-          "description": "Khai trương cửa hàng may đo Veston số 1 năm 2008" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/10. Hoc tap va lam theo Bac.JPG", 
-          "description": "Tổ chức gặp mặt, tọa đàm kỷ niệm 60 năm Bác Hồ về thăm May 10" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/2. Lanh dao M10 va doan the/3. HDQT va CQDH.jpg",
-          "description": "Hội đồng quản trị và Ban điều hành Tổng Công ty May 10 nhiệm kỳ 2025-2030" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/3. Lanh dao ve tham/12. Ong Le Hoai Trung tham Ha Quang.jpg",
-          "description": "Bí thư Trung ương Đảng, Trưởng Ban Đối ngoại Trung ương Lê Hoài Trung thăm, làm việc tại XN may Hà Quảng – TCT May 10 ngày 19/01/2025" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/3. Lanh dao ve tham/13- Phó Chủ tịch Quốc Hội Nguyễn Thị Kim Ngân thăm XN may Hà Quảng – TCT May 10 năm 2015.JPG",
-          "description": "Phó Chủ tịch Quốc Hội Nguyễn Thị Kim Ngân thăm XN may Hà Quảng – TCT May 10 năm 2015" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/3. Lanh dao ve tham/14. Ong Dao Ngoc Dung.jpg",
-          "description": "Bộ trưởng Bộ LĐTB & XH Đào Ngọc Dung thăm TCT May 10 ngày 17/9/2019" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/4. Danh hieu/20. Co thi dua TTCP 2024.jpg",
-          "description": "TCT May 10 nhận cờ thi đua xuất sắc của Thủ tướng Chính phủ năm 2024" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/4. Danh hieu/21. 07 ky lien tiep Giai thuong THQG.jpg",
-          "description": "07 kỳ liên tiếp May 10 được vinh danh Thương hiệu Quốc gia Việt năng từ 2008" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/4. Danh hieu/22. 11 lan DN vi NLD 2025.JPG",
-          "description": "11 lần liên tiếp May 10 được vinh danh Doanh nghiệp tiêu biểu vì Người lao động cấp Quốc gia" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/4. Danh hieu/23- NL xanh 2023.jpg",
-          "description": "May 10 đạt giải thưởng đơn vị 5 sao - Năng lượng xanh 2023" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/Nha xuong, TB, cong nghe/30. May do VT.jpg",
-          "description": "May 10 phát triển sản phẩm Veston may đo cao cấp từ năm 2008" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/Nha xuong, TB, cong nghe/31. DeTheia.jpg",
-          "description": "TCT May 10 ra mắt thương hiệu thời trang nữ cao cấp DeTheia ngày 16/10/ 2022" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/Nha xuong, TB, cong nghe/33. VTHH.png",
-          "description": "11h11 phút ngày 11/11/2011, khánh thành Trung tâm thương mại và sản xuất công nghệ cao Veston Hưng Hà" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/Nha xuong, TB, cong nghe/34. Bim Son.jpg",
-          "description": "Năm 2022, khánh thành Chi nhánh TCT May 10 - Xí nghiệp may Bỉm Sơn – công trình được đầu tư mới, hiện đại đáp ứng tiêu chuẩn toàn cầu" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/Nha xuong, TB, cong nghe/35. May HH.png",
-          "description": "Ngày 11/02/2022, khánh thành Chi nhánh TCT May 10 - Xí nghiệp may Hưng Hà – công trình được đầu tư mới, hiện đại đáp ứng tiêu chuẩn toàn cầu" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/11. Tai tro phong luu tru di tich HCM.jpg",
-          "description": "May 10 góp phần tu bổ phòng lưu trữ di vật Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch – thể hiện lòng tri ân và sự trân trọng di sản của Người (2025)" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/17. Tham du ABIS.jpg", 
-          "description": "Tổng Giám đốc May 10 - Thành viên Hội đồng Tư vấn Kinh doanh ASEAN (ASEAN-BAC) Việt Nam tham dự Diễn đàn Kinh doanh và Đầu tư ASEAN (ABIS) 2023 tại Indonesia" },
-        { "imageUrl": "8. 2010 - TCT May 10 ( 2010-nay)/18. Tham du VCCI.jpg",
-          "description": "Tổng Giám đốc May 10 tham dự Hội nghị Thượng đỉnh Kinh doanh Việt Nam – Hoa Kỳ 2024" }
+        {
+          "title": "Chi Tiết — Lịch Sử",
+          "description": "Nội dung bổ sung trang 2 của hiện vật số 1.",
+          "imageUrl": "https://your-cloudinary.com/exhibits/exhibit_01_p2.jpg",
+          "subImages": []
+        }
       ]
     },
     {
-      "id": "Vách CSR",
-      "title": "CÔNG TÁC CHĂM LO NGƯỜI LAO ĐỘNG VÀ CÔNG TÁC XÃ HỘI CỘNG ĐỒNG",
-      "pages": [
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/1. Hoi dien van nghe nam 1962.jpg",
-          "description": "Hội diễn văn nghệ của CBCNV Xí nghiệp May 10 năm 1962"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/2.Bong chuyen nu nam 1971.jpg",
-          "description": "Giải bóng chuyền nữ của CBCNV Xí nghiệp May 10 trong những năm 1971"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/3. Hoi dien van nghe nam 2004.jpg",
-          "description": "Liên hoan tiếng hát CNLĐ Công ty Cổ phần May 10 năm 2004"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/4. Qua cua CD DMVN (1).jpg",
-          "description": "Tặng quà cho người lao động có hoàn cảnh khó khăn tại Tết sum vầy năm 2025"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/5. Nghi mat 2018.JPG",
-          "description": "Hàng năm tổ chức nghỉ mát hè cho người lao động"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/5. Tuyen duong HSG 2017.JPG",
-          "description": "Lễ tuyên dương học sinh giỏi con CBCNV năm 2017"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/6.Trung thu 2019 (1).JPG",
-          "description": "Hàng năm tổ chức Tết trung thu cho con CBCNV"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/8.Mam non.JPG",
-          "description": "Trường Mầm non May 10 chăm sóc con CBCNV để bố mẹ yên tâm công tác"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/9. Tam soat UT cho CBCNV.jpg",
-          "description": "Ngoài khám sức khỏe 01 năm 02 lần, người lao động còn được tầm soát ung thư sớm"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/10.Dao tao LBC.jpg",
-          "description": "Trường Cao đẳng Long Biên tổ chức đào tạo nghề cho người lao động"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/11. Sieu thi.jpg",
-          "description": "Hệ thống Siêu thị M10mart phục vụ nhu cầu tiêu dùng của người lao động"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/12. Dua NLD ve que an Tet.JPG",
-          "description": "May 10 tổ chức các chuyến xe nghĩa tình đưa, đón người lao động và gia thuộc về quê ăn Tết"
-        },
-        {
-          "imageUrl": "1. Anh Cham lo cho NLD/13. Chuc mung 8.3.jpg",
-          "description": "Tổ chức tặng hoa chúc mừng và tặng qùa cho chị em nhân ngày Quốc tế Phụ nữ 8/3 và Phụ nữ Việt Nam 20/10"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/May 10 vi cong dong.JPG",
-          "description": "May 10 không chỉ lớn mạnh trong sản xuất – kinh doanh, mà còn luôn kiên định với sứ mệnh sẻ chia cùng cộng đồng, vun đắp những giá trị nhân văn suốt hành trình 80 năm."
-        },
-        { "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/Tu thien.jpg",
-          "description": "48 tỷ đồng dành cho các hoạt động thiện nguyện, an sinh xã hội (từ năm 1992 đến nay).\nPhụng dưỡng 24 Mẹ Việt Nam Anh hùng – tri ân công lao người đi trước.\nXây dựng 37 ngôi nhà tình nghĩa cho các gia đình chính sách, người có hoàn cảnh khó khăn.\nTài trợ xây dựng 08 cây cầu dân sinh tại các tỉnh miền núi – mang đến con đường đến trường và sinh kế mới cho người dân.\nĐóng góp công trình “Dấu ấn Định đô Thăng Long – Con đường gốm sứ ven sông Hồng” – biểu tượng nghìn năm văn hiến Thăng Long – Hà Nội.\nĐỡ đầu 13 trẻ em bị ảnh hưởng chất độc da cam, chia sẻ nỗi đau hậu chiến.\nỦng hộ 160.000 khẩu trang phòng chống COVID-19, cùng hơn 20.000 bộ quần áo tặng đồng bào vùng bão lũ."
-        },
-        { "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/1. Tang nha.JPG",
-          "description": "Lễ bàn giao nhà tình nghĩa của May 10 cho Mẹ Việt Nam Anh hùng Trần Thị Đồng tại Quảng Nam thập niên 90."
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/2. Tang khuyen hoc.jpg",
-          "description": "Lễ trao thưởng khuyến học của May 10 cho học sinh ATK –Định Hóa – Thái Nguyên năm 2012."
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/3. tu thien 2003 .jpg",
-          "description": "Trao quà cho người nghèo trong khu tập thể May 10 – Tết Quý Mùi 2003"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/4. Ung ho bien dao.JPG",
-          "description": "May 10 trao tiền ủng hộ đồng bào và chiến sỹ biển đảo năm 2014"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/5. Tang qua Thuong binh nam 2013.jpg",
-          "description": "Thăm hỏi và tặng quà cho Thương binh năm 2013"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/6. May 10 vi cong dong.jpg",
-          "description": "Ủng hộ mua vắc xin phòng chống dịch Covid -19 năm 2021"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/7. Dan tri so 8.jpg",
-          "description": "May 10 ủng hộ xây dựng Cầu dân trí – Khuyến học cho đồng bào vùng sâu, vùng xa năm 2025"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/8. Tang dong bao bao lu 2025.jpg",
-          "description": "CBCNV May 10 chung tay chia sẻ ủng hộ đồng bào vũng lũ tỉnh Thái Nguyên năm 2025"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/9. Tang qua Boc Nhieu.jpg",
-          "description": "Trao quà cho học sinh tại điểm trường Bộc Nhiêu - Thái Nguyên năm 2025"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/10. Ung ho Cu Ba.jpg",
-          "description": "CBCNV May 10 chung tay ủng hộ Nhân dân Cu Ba năm 2025"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/11. Ung ho dong bao 2012.jpg",
-          "description": "May 10 ủng hộ đồng bào bị bão lũ năm 2012"
-        },
-        {
-          "imageUrl": "Assets/StreamingAssets/2. Anh Trach nhiem XN, tu thien/12. Trao bo quan ao Bac Ho T5.2025.jpg",
-          "description": "May 10 góp phần tu bổ phòng lưu trữ di vật Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch – thể hiện lòng tri ân và sự trân trọng di sản của Người (2025)"
-        }
-      ]
+      "id": "Exhibit_2",
+      "order": 2,
+      "isPublished": true,
+      "category": "Lịch Sử 1945-1954",
+      "name": "Tên Hiện Vật 2",
+      "description": "Mô tả ngắn hiện vật số 2.",
+      "imageUrl": "https://your-cloudinary.com/exhibits/exhibit_02.jpg",
+      "subImages": [],
+      "audioUrl": "",
+      "tags": [
+        "lịch sử",
+        "1954"
+      ],
+      "pages": []
     }
   ]
 }
