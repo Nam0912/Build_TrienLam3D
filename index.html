@@ -1,133 +1,249 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | DoAnTN</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">DoAnTN</div>
-      </div>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoAnTN — Triển Lãm 3D UTC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d1117; overflow: hidden; font-family: 'Inter', sans-serif; }
+    #unity-canvas { width: 100vw; height: 100vh; display: block; }
+
+    /* Loading Bar */
+    #loading-overlay {
+      position: fixed; inset: 0; background: #0d1117;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; z-index: 9999;
+      transition: opacity .5s;
+    }
+    #loading-overlay.fade-out { opacity: 0; pointer-events: none; }
+    #loading-title { color: #D4AF37; font-size: 22px; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px; }
+    #loading-sub { color: #8b949e; font-size: 13px; margin-bottom: 40px; }
+    #loading-bar-wrap { width: 280px; height: 3px; background: #21262d; border-radius: 2px; overflow: hidden; }
+    #loading-bar-fill { height: 100%; background: linear-gradient(90deg, #D4AF37, #f0d060); width: 0%; transition: width .3s; border-radius: 2px; }
+    #loading-pct { color: #8b949e; font-size: 12px; margin-top: 12px; }
+
+    /* ===== CHAT WIDGET ===== */
+    #chat-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, #D4AF37, #b8962e);
+      border: none; cursor: pointer; font-size: 24px;
+      box-shadow: 0 4px 20px rgba(212,175,55,.5);
+      transition: transform .2s, box-shadow .2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #chat-fab:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(212,175,55,.7); }
+
+    #chat-panel {
+      position: fixed; bottom: 96px; right: 28px; z-index: 1000;
+      width: 340px; height: 480px;
+      background: #161b22; border: 1px solid #30363d; border-radius: 16px;
+      display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,.6);
+      transform: scale(.95) translateY(10px); opacity: 0;
+      transition: all .25s cubic-bezier(.34,1.56,.64,1);
+      pointer-events: none;
+    }
+    #chat-panel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+
+    #chat-header {
+      padding: 14px 16px; background: #0d1117;
+      border-bottom: 1px solid #30363d;
+      display: flex; align-items: center; gap: 10px;
+    }
+    #chat-header .dot { width: 8px; height: 8px; border-radius: 50%; background: #3fb950; }
+    #chat-header .title { font-size: 14px; font-weight: 600; color: #e6edf3; flex: 1; }
+    #chat-header .sub { font-size: 11px; color: #8b949e; }
+    #chat-close { background: none; border: none; color: #8b949e; cursor: pointer; font-size: 18px; padding: 4px; }
+    #chat-close:hover { color: #f85149; }
+
+    #chat-messages {
+      flex: 1; overflow-y: auto; padding: 14px;
+      display: flex; flex-direction: column; gap: 10px;
+      scroll-behavior: smooth;
+    }
+    #chat-messages::-webkit-scrollbar { width: 4px; }
+    #chat-messages::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+
+    .msg { max-width: 80%; padding: 9px 13px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
+    .msg.bot { background: #21262d; color: #e6edf3; align-self: flex-start; border-bottom-left-radius: 4px; }
+    .msg.user { background: linear-gradient(135deg, #D4AF37, #b8962e); color: #000; align-self: flex-end; border-bottom-right-radius: 4px; font-weight: 500; }
+    .msg.typing { opacity: .6; }
+    .typing-dots::after { content: ''; animation: dots 1.2s infinite; }
+    @keyframes dots {
+      0%   { content: '●'; }
+      33%  { content: '● ●'; }
+      66%  { content: '● ● ●'; }
+    }
+
+    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .suggestion {
+      background: #21262d; border: 1px solid #30363d; border-radius: 20px;
+      padding: 5px 11px; font-size: 11px; color: #8b949e; cursor: pointer;
+      transition: all .2s;
+    }
+    .suggestion:hover { border-color: #D4AF37; color: #D4AF37; }
+
+    #chat-input-row {
+      padding: 12px; border-top: 1px solid #30363d;
+      display: flex; gap: 8px; align-items: center;
+    }
+    #chat-input {
+      flex: 1; background: #21262d; border: 1px solid #30363d;
+      border-radius: 20px; padding: 8px 14px; color: #e6edf3; font-size: 13px;
+      outline: none; font-family: 'Inter', sans-serif; transition: border-color .2s;
+    }
+    #chat-input:focus { border-color: #D4AF37; }
+    #chat-send {
+      width: 36px; height: 36px; border-radius: 50%; border: none;
+      background: linear-gradient(135deg, #D4AF37, #b8962e);
+      color: #000; cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .15s; flex-shrink: 0;
+    }
+    #chat-send:hover { transform: scale(1.1); }
+    #chat-send:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- Unity Canvas -->
+<canvas id="unity-canvas" tabindex="-1"></canvas>
+
+<!-- Loading Overlay -->
+<div id="loading-overlay">
+  <div id="loading-title">🏛️ TRIỂN LÃM 3D UTC</div>
+  <div id="loading-sub">Đang tải không gian triển lãm...</div>
+  <div id="loading-bar-wrap"><div id="loading-bar-fill"></div></div>
+  <div id="loading-pct">0%</div>
+</div>
+
+<!-- Chat Widget -->
+<button id="chat-fab" title="Hỏi hướng dẫn viên ảo">💬</button>
+
+<div id="chat-panel">
+  <div id="chat-header">
+    <div class="dot"></div>
+    <div>
+      <div class="title">Hướng Dẫn Viên Ảo</div>
+      <div class="sub">Được hỗ trợ bởi Gemini AI</div>
     </div>
-    <script>
-      var canvas = document.querySelector("#unity-canvas");
+    <button id="chat-close">✕</button>
+  </div>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        var warningBanner = document.querySelector("#unity-warning");
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+  <div id="chat-messages">
+    <div class="msg bot">Xin chào! Tôi là hướng dẫn viên ảo của Triển Lãm 3D UTC. Bạn có thể hỏi tôi về bất kỳ hiện vật nào trong bộ sưu tập! 🏛️</div>
+    <div class="chat-suggestions">
+      <span class="suggestion">Bảo tàng có bao nhiêu hiện vật?</span>
+      <span class="suggestion">Giới thiệu về triển lãm</span>
+      <span class="suggestion">Hiện vật nào nổi bật nhất?</span>
+    </div>
+  </div>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/DoAnTN_Build.loader.js";
-      var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/DoAnTN_Build.data.unityweb",
-        frameworkUrl: buildUrl + "/DoAnTN_Build.framework.js.unityweb",
-        codeUrl: buildUrl + "/DoAnTN_Build.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "DoAnTN",
-        productVersion: "0.1.0",
-        showBanner: unityShowBanner,
-        // errorHandler: function(err, url, line) {
-        //    alert("error " + err + " occurred at line " + line);
-        //    // Return 'true' if you handled this error and don't want Unity
-        //    // to process it further, 'false' otherwise.
-        //    return true;
-        // },
-      };
+  <div id="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Nhập câu hỏi về triển lãm..." maxlength="200">
+    <button id="chat-send">➤</button>
+  </div>
+</div>
 
-      // By default, Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
+<!-- Unity WebGL Loader -->
+<script src="Build/DoAnTN_Build.loader.js"></script>
+<script>
+  // ===== UNITY LOADING =====
+  const canvas       = document.getElementById("unity-canvas");
+  const loadOverlay  = document.getElementById("loading-overlay");
+  const barFill      = document.getElementById("loading-bar-fill");
+  const pctText      = document.getElementById("loading-pct");
 
-      // If you would like all file writes inside Unity Application.persistentDataPath
-      // directory to automatically persist so that the contents are remembered when
-      // the user revisits the site the next time, uncomment the following line:
-      // config.autoSyncPersistentDataPath = true;
-      // This autosyncing is currently not the default behavior to avoid regressing
-      // existing user projects that might rely on the earlier manual
-      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
-      // expected to change.
+  createUnityInstance(canvas, {
+    dataUrl:            "Build/DoAnTN_Build.data.unityweb",
+    frameworkUrl:       "Build/DoAnTN_Build.framework.js.unityweb",
+    codeUrl:            "Build/DoAnTN_Build.wasm.unityweb",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName:        "DefaultCompany",
+    productName:        "DoAnTN",
+    productVersion:     "0.1.0",
+  }, progress => {
+    const pct = Math.round(progress * 100);
+    barFill.style.width = pct + "%";
+    pctText.textContent = pct + "%";
+  }).then(() => {
+    loadOverlay.classList.add("fade-out");
+    setTimeout(() => loadOverlay.style.display = "none", 600);
+  }).catch(err => console.error("Unity load error:", err));
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
+  // ===== CHAT WIDGET =====
+  const fab      = document.getElementById("chat-fab");
+  const panel    = document.getElementById("chat-panel");
+  const closeBtn = document.getElementById("chat-close");
+  const messages = document.getElementById("chat-messages");
+  const input    = document.getElementById("chat-input");
+  const sendBtn  = document.getElementById("chat-send");
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
+  // Toggle panel
+  fab.addEventListener("click", () => panel.classList.toggle("open"));
+  closeBtn.addEventListener("click", () => panel.classList.remove("open"));
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+  // Suggestion chips
+  document.querySelectorAll(".suggestion").forEach(chip => {
+    chip.addEventListener("click", () => {
+      input.value = chip.textContent;
+      sendMessage();
+    });
+  });
 
+  // Send on Enter
+  input.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) sendMessage(); });
+  sendBtn.addEventListener("click", sendMessage);
 
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
+  function addMsg(text, role) {
+    const div = document.createElement("div");
+    div.className = "msg " + role;
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    return div;
+  }
 
-      document.querySelector("#unity-loading-bar").style.display = "block";
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
-              }).then((unityInstance) => {
-                document.querySelector("#unity-loading-bar").style.display = "none";
-                document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
+    // Hide suggestions after first message
+    const suggestions = document.querySelector(".chat-suggestions");
+    if (suggestions) suggestions.remove();
 
-              }).catch((message) => {
-                alert(message);
-              });
-            };
+    addMsg(text, "user");
+    input.value = "";
+    sendBtn.disabled = true;
 
-      document.body.appendChild(script);
+    // Typing indicator
+    const typing = document.createElement("div");
+    typing.className = "msg bot typing";
+    typing.innerHTML = '<span class="typing-dots">Đang trả lời</span>';
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
 
-    </script>
-  </body>
+    try {
+      const res = await fetch("/api/chat", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ message: text })
+      });
+      const data = await res.json();
+      typing.remove();
+      addMsg(data.reply || "Xin lỗi, tôi không thể trả lời lúc này.", "bot");
+    } catch {
+      typing.remove();
+      addMsg("Lỗi kết nối. Vui lòng thử lại sau.", "bot");
+    } finally {
+      sendBtn.disabled = false;
+      input.focus();
+    }
+  }
+</script>
+</body>
 </html>
