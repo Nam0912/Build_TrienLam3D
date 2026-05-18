@@ -10,9 +10,9 @@ export default async function handler(req, res) {
   const { message } = req.body || {};
   if (!message?.trim()) return res.status(400).json({ error: "Thiếu nội dung tin nhắn" });
 
-  const GEMINI_KEY = process.env.GEMINI_API_KEY;
-  const FB_KEY = process.env.FIREBASE_API_KEY;
-  const FB_PROJECT = process.env.FIREBASE_PROJECT_ID || "trienlam3d-84c03";
+  const GEMINI_KEY   = process.env.GEMINI_API_KEY;
+  const FB_KEY       = process.env.FIREBASE_API_KEY;
+  const FB_PROJECT   = process.env.FIREBASE_PROJECT_ID || "trienlam3d-84c03";
 
   try {
     // 1. Lấy dữ liệu hiện vật từ Firestore để làm context cho AI
@@ -29,22 +29,30 @@ export default async function handler(req, res) {
           exhibits.map(e => {
             const yr = e.yearRange?.from
               ? (e.yearRange.from === e.yearRange.to
-                ? `Năm: ${e.yearRange.from}`
-                : `Giai đoạn: ${e.yearRange.from}–${e.yearRange.to}`)
+                  ? `Năm: ${e.yearRange.from}`
+                  : `Giai đoạn: ${e.yearRange.from}–${e.yearRange.to}`)
               : "";
             const tags = (e.tags || []).length > 0 ? `Tags: [${e.tags.join(", ")}]` : "";
             return `- ${e.name} (ID: ${e.id}, Thể loại: ${e.category || "Chung"}${yr ? ", " + yr : ""}${tags ? ", " + tags : ""}): ${e.description || "Chưa có mô tả"}`;
           }).join("\n");
       }
-    } catch (_) { }
+    } catch (_) {}
 
     // 2. Gọi Gemini API
-    const prompt = `Bạn là hướng dẫn viên ảo tại bảo tàng 3D UTC. Trả lời ngắn gọn, thân thiện bằng tiếng Việt (tối đa 4 câu).
+    const prompt = `Bạn là hướng dẫn viên ảo tại bảo tàng 3D UTC. Nhiệm vụ của bạn là TRẢ LỜI TRỰC TIẾP câu hỏi của khách tham quan.
 
-Thông tin bảo tàng:
+QUY TẮC QUAN TRỌNG:
+- KHÔNG chào hỏi, KHÔNG giới thiệu bản thân (trừ khi được hỏi)
+- Trả lời NGẮN GỌN, đúng trọng tâm (tối đa 3-4 câu)
+- Nếu không có thông tin, nói: "Hiện tôi chưa có thông tin về vấn đề này."
+- Dùng tiếng Việt
+
+DỮ LIỆU BẢO TÀNG:
 ${context}
 
-Câu hỏi: ${message}`;
+CÂU HỎI CỦA KHÁCH: ${message}
+
+TRẢ LỜI:`;
 
     // Kiểm tra API key có tồn tại không
     if (!GEMINI_KEY) {
@@ -52,7 +60,7 @@ Câu hỏi: ${message}`;
     }
 
     const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
