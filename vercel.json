@@ -17,19 +17,16 @@
     {
       "source": "/Build/(.*)\\.js\\.br",
       "headers": [
-        { "key": "Content-Type", "value": "application/javascript" },
+        { "key": "Content-Type",     "value": "application/javascript" },
         { "key": "Content-Encoding", "value": "br" }
       ]
     },
     {
       "source": "/Build/(.*)\\.wasm\\.br",
       "headers": [
-        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Type",     "value": "application/wasm" },
         { "key": "Content-Encoding", "value": "br" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/api/chat", "destination": "/api/chat" }
   ]
 }
