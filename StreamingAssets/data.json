@@ -1,48 +1,137 @@
 {
-  "museumName": "Triển Lãm 3D UTC",
+  "museumName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
   "version": "2.0.0",
-  "lastUpdated": "2026-05-06",
+  "lastUpdated": "2026-05-22",
   "exhibits": [
     {
       "id": "Exhibit_1",
       "order": 1,
       "isPublished": true,
-      "category": "Lịch Sử 1945-1954",
-      "name": "Tên Hiện Vật 1",
-      "description": "Mô tả ngắn hiện vật số 1.",
-      "imageUrl": "Assets/StreamingAssets/UTC/1945-1954/1945_Bac_Ho_doc_tuyen_ngon_Doc_ap_2_9.jpg",
+      "category": "Tranh Sơn Dầu",
+      "name": "Thiếu nữ bên hoa huệ",
+      "description": "Thiếu nữ bên hoa huệ là một tác phẩm tranh sơn dầu do họa sĩ Tô Ngọc Vân sáng tác năm 1943. Bức tranh mô tả chân dung một thiếu nữ Việt Nam mặc áo dài trắng đang nghiêng đầu dịu dàng bên bình hoa huệ trắng. Đây được coi là tác phẩm tiêu biểu nhất trong sự nghiệp của Tô Ngọc Vân cũng như là một trong những đại diện xuất sắc nhất cho mỹ thuật Việt Nam đầu thế kỷ 20. Tô Ngọc Vân (1906–1954) là một họa sĩ tài hoa, tốt nghiệp khóa II trường Mỹ thuật Đông Dương, người đã đặt nền móng cho thể loại tranh sơn dầu tại Việt Nam.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/f/f6/Thieu_nu_ben_hoa_hue.jpg",
       "subImages": [
-        "https://your-cloudinary.com/exhibits/exhibit_01_sub1.jpg",
-        "https://your-cloudinary.com/exhibits/exhibit_01_sub2.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/b/b3/To_Ngoc_Van.jpg",
+        "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600"
       ],
       "audioUrl": "",
       "tags": [
-        "lịch sử",
-        "1945"
+        "Thiếu nữ bên hoa huệ",
+        "Tô Ngọc Vân",
+        "Tranh sơn dầu",
+        "1943",
+        "Mỹ thuật Đông Dương"
       ],
-      "pages": [
-        {
-          "title": "Chi Tiết — Lịch Sử",
-          "description": "Nội dung bổ sung trang 2 của hiện vật số 1.",
-          "imageUrl": "https://your-cloudinary.com/exhibits/exhibit_01_p2.jpg",
-          "subImages": []
-        }
-      ]
+      "yearRange": {
+        "from": 1943,
+        "to": 1943
+      },
+      "pages": []
     },
     {
       "id": "Exhibit_2",
       "order": 2,
       "isPublished": true,
-      "category": "Lịch Sử 1945-1954",
-      "name": "Tên Hiện Vật 2",
-      "description": "Mô tả ngắn hiện vật số 2.",
-      "imageUrl": "https://your-cloudinary.com/exhibits/exhibit_02.jpg",
-      "subImages": [],
+      "category": "Tranh Sơn Dầu",
+      "name": "Em Thúy",
+      "description": "Em Thúy là bức tranh sơn dầu do họa sĩ Trần Văn Cẩn sáng tác năm 1943, mô tả chân dung một bé gái 8 tuổi tên là Minh Thúy. Tác phẩm thể hiện tài năng bậc thầy của họa sĩ trong việc lột tả vẻ trong sáng, ngây thơ nhưng cũng có chút u buồn trong mắt em bé. Bức tranh được công nhận là Bảo vật quốc gia của Việt Nam vào năm 2013 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Việt Nam. Họa sĩ Trần Văn Cẩn (1910–1994) là một trong bộ tứ họa sĩ nổi tiếng 'Trí, Vân, Lân, Cẩn' của nền hội họa hiện đại Việt Nam.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Tranh_Em_Thuy.jpg",
+      "subImages": [
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300",
+        "https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=600"
+      ],
       "audioUrl": "",
       "tags": [
-        "lịch sử",
-        "1954"
+        "Em Thúy",
+        "Trần Văn Cẩn",
+        "Tranh sơn dầu",
+        "1943",
+        "Bảo vật quốc gia"
       ],
+      "yearRange": {
+        "from": 1943,
+        "to": 1943
+      },
+      "pages": []
+    },
+    {
+      "id": "Exhibit_3",
+      "order": 3,
+      "isPublished": true,
+      "category": "Tranh Sơn Mài",
+      "name": "Vườn xuân Trung Nam Bắc",
+      "description": "Vườn xuân Trung Nam Bắc là tác phẩm sơn mài đỉnh cao của danh họa Nguyễn Gia Trí, được thực hiện trong thời gian dài từ năm 1969 đến 1989. Tác phẩm mô tả vẻ đẹp thiên nhiên và con người ba miền Việt Nam trong không khí lễ hội mùa xuân rực rỡ sắc vàng gold. Bức tranh phản ánh khát vọng hòa bình thống nhất đất nước và là một tác phẩm đồ sộ cả về kích thước lẫn giá trị nghệ thuật nghệ thuật sơn mài. Nguyễn Gia Trí (1908–1993) là người đi đầu trong việc chuyển đổi sơn mài từ một nghề thủ công mỹ nghệ thành một chất liệu hội họa bác học.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/b/bc/Vuon_xuan_Trung_Nam_Bac.jpg",
+      "subImages": [
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300",
+        "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=600"
+      ],
+      "audioUrl": "",
+      "tags": [
+        "Vườn xuân Trung Nam Bắc",
+        "Nguyễn Gia Trí",
+        "Tranh sơn mài",
+        "1969",
+        "1989",
+        "Bảo vật quốc gia"
+      ],
+      "yearRange": {
+        "from": 1969,
+        "to": 1989
+      },
+      "pages": []
+    },
+    {
+      "id": "Exhibit_4",
+      "order": 4,
+      "isPublished": true,
+      "category": "Tranh Sơn Mài",
+      "name": "Kết nạp Đảng ở Điện Biên Phủ",
+      "description": "Kết nạp Đảng ở Điện Biên Phủ là bức tranh sơn mài nổi tiếng của họa sĩ Nguyễn Sáng, sáng tác năm 1956. Bức tranh tái hiện thời khắc thiêng liêng và hào hùng của cuộc chiến Điện Biên Phủ lịch sử, ghi lại cảnh kết nạp Đảng ngay tại chiến trường đầy khói lửa. Tác phẩm nổi bật với ngôn ngữ tạo hình mạnh mẽ, dứt khoát, bảng màu sơn mài trầm ấm mang tính biểu cảm cao. Nguyễn Sáng (1923–1988) tốt nghiệp trường Mỹ thuật Gia Định và Mỹ thuật Đông Dương, nổi tiếng với tinh thần cách mạng và nghệ thuật chân thực, giàu cảm xúc.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/8/87/Ket_nap_Dang_o_Dien_Bien_Phu.jpg",
+      "subImages": [
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300",
+        "https://images.unsplash.com/photo-1580136579312-94651dfd596d?q=80&w=600"
+      ],
+      "audioUrl": "",
+      "tags": [
+        "Kết nạp Đảng ở Điện Biên Phủ",
+        "Nguyễn Sáng",
+        "Tranh sơn mài",
+        "1956",
+        "Điện Biên Phủ"
+      ],
+      "yearRange": {
+        "from": 1956,
+        "to": 1956
+      },
+      "pages": []
+    },
+    {
+      "id": "Exhibit_5",
+      "order": 5,
+      "isPublished": true,
+      "category": "Tranh Sơn Dầu",
+      "name": "Hai thiếu nữ và em bé",
+      "description": "Hai thiếu nữ và em bé là một kiệt tác sơn dầu khác của Tô Ngọc Vân sáng tác năm 1944. Bức tranh vẽ hai cô gái trong trang phục áo dài truyền thống đang ngồi trò chuyện bên thềm nhà, cạnh bên là một em bé đang chơi đùa. Bức tranh thể hiện không gian thanh bình, nhẹ nhàng và tôn vinh nét đẹp dịu hiền, đằm thắm của phụ nữ Việt Nam xưa. Bức tranh đã được công nhận là Bảo vật quốc gia năm 2013 và hiện trưng bày tại Bảo tàng Mỹ thuật Việt Nam.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/49/Hai_thieu_nu_va_em_be.jpg",
+      "subImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/b3/To_Ngoc_Van.jpg",
+        "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=600"
+      ],
+      "audioUrl": "",
+      "tags": [
+        "Hai thiếu nữ và em bé",
+        "Tô Ngọc Vân",
+        "Tranh sơn dầu",
+        "1944",
+        "Bảo vật quốc gia"
+      ],
+      "yearRange": {
+        "from": 1944,
+        "to": 1944
+      },
       "pages": []
     }
   ]

@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
   try {
     // 1. Lấy dữ liệu hiện vật từ Firestore để làm context cho AI
-    let context = "Đây là bảo tàng ảo 3D UTC. Chưa có dữ liệu hiện vật.";
+    let context = "Đây là triển lãm ảo Triển Lãm Mỹ Thuật Việt Nam 3D. Chưa có dữ liệu tác phẩm.";
     try {
       const fsRes = await fetch(
         `https://firestore.googleapis.com/v1/projects/${FB_PROJECT}/databases/(default)/documents/museum/data?key=${FB_KEY}`
@@ -25,12 +25,12 @@ export default async function handler(req, res) {
         const fsData = await fsRes.json();
         const db = JSON.parse(fsData.fields?.jsonData?.stringValue || "{}");
         const exhibits = (db.exhibits || []).filter(e => e.isPublished !== false);
-        context = `Bảo tàng: ${db.museumName || "Triển Lãm 3D UTC"}\nTổng số hiện vật: ${exhibits.length}\n\nDanh sách hiện vật:\n` +
+        context = `Triển lãm: ${db.museumName || "Triển Lãm Mỹ Thuật Việt Nam 3D"}\nTổng số tác phẩm: ${exhibits.length}\n\nDanh sách tác phẩm nghệ thuật:\n` +
           exhibits.map(e => {
             const yr = e.yearRange?.from
               ? (e.yearRange.from === e.yearRange.to
-                  ? `Năm: ${e.yearRange.from}`
-                  : `Giai đoạn: ${e.yearRange.from}–${e.yearRange.to}`)
+                  ? `Năm sáng tác: ${e.yearRange.from}`
+                  : `Giai đoạn sáng tác: ${e.yearRange.from}–${e.yearRange.to}`)
               : "";
             const tags = (e.tags || []).length > 0 ? `Tags: [${e.tags.join(", ")}]` : "";
             return `- ${e.name} (ID: ${e.id}, Thể loại: ${e.category || "Chung"}${yr ? ", " + yr : ""}${tags ? ", " + tags : ""}): ${e.description || "Chưa có mô tả"}`;
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     } catch (_) {}
 
     // 2. Gọi Gemini API
-    const prompt = `Bạn là hướng dẫn viên ảo tại bảo tàng 3D UTC. Nhiệm vụ của bạn là TRẢ LỜI TRỰC TIẾP câu hỏi của khách tham quan.
+    const prompt = `Bạn là hướng dẫn viên ảo tại Triển Lãm Mỹ Thuật Việt Nam 3D. Nhiệm vụ của bạn là TRẢ LỜI TRỰC TIẾP câu hỏi của khách tham quan.
 
 QUY TẮC QUAN TRỌNG:
 - KHÔNG chào hỏi, KHÔNG giới thiệu bản thân (trừ khi được hỏi)
@@ -47,7 +47,7 @@ QUY TẮC QUAN TRỌNG:
 - Nếu không có thông tin, nói: "Hiện tôi chưa có thông tin về vấn đề này."
 - Dùng tiếng Việt
 
-DỮ LIỆU BẢO TÀNG:
+DỮ LIỆU TRIỂN LÃM:
 ${context}
 
 CÂU HỎI CỦA KHÁCH: ${message}
@@ -60,7 +60,7 @@ TRẢ LỜI:`;
     }
 
     const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_KEY}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
