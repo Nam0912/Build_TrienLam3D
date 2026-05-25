@@ -1,31 +1,27 @@
 {
   "museumName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
-  "version": "2.0.0",
-  "lastUpdated": "2026-05-22",
+  "version": "2.0.18",
+  "lastUpdated": "2026-05-24",
   "exhibits": [
     {
       "id": "Exhibit_1",
       "order": 1,
       "isPublished": true,
-      "category": "Tranh Sơn Dầu",
-      "name": "Thiếu nữ bên hoa huệ",
-      "description": "Thiếu nữ bên hoa huệ là một tác phẩm tranh sơn dầu do họa sĩ Tô Ngọc Vân sáng tác năm 1943. Bức tranh mô tả chân dung một thiếu nữ Việt Nam mặc áo dài trắng đang nghiêng đầu dịu dàng bên bình hoa huệ trắng. Đây được coi là tác phẩm tiêu biểu nhất trong sự nghiệp của Tô Ngọc Vân cũng như là một trong những đại diện xuất sắc nhất cho mỹ thuật Việt Nam đầu thế kỷ 20. Tô Ngọc Vân (1906–1954) là một họa sĩ tài hoa, tốt nghiệp khóa II trường Mỹ thuật Đông Dương, người đã đặt nền móng cho thể loại tranh sơn dầu tại Việt Nam.",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/f/f6/Thieu_nu_ben_hoa_hue.jpg",
+      "category": "Tranh Sơn Mài",
+      "name": "Bình Phong Thiếu nữ trong vướn - Phong cảnh",
+      "description": "“Bình phong” là một trong những tác phẩm sơn mài quan trọng nhất của Nguyễn Gia Trí giai đoạn trước Cách mạng tháng Tám. Tác phẩm được sáng tác trong thời kỳ mỹ thuật Đông Dương phát triển mạnh, khi nhiều họa sĩ Việt Nam bắt đầu thử nghiệm việc kết hợp kỹ thuật hội họa phương Tây với vật liệu truyền thống Việt Nam.\n- Mặt 1: “Thiếu nữ trong vườn” có bố cục nhẹ nhàng, thanh thoát, khung cảnh phủ sắc vàng đặc trưng của sơn mài Nguyễn Gia Trí với 7 nhân vật nữ ở các độ tuổi khác nhau được xem như biểu tượng cho các giai đoạn cuộc đời người phụ nữ.\n- Mặt 2: “Phong cảnh” diễn tả khu vườn nhiệt đới Việt Nam với họa tiết sáng trên nền sẫm, bút pháp khoẻ khoắn, mạch lạc, giàu tính trang trí.\nBình phong là sự kết hợp hài hòa giữa lối tạo hình hiện đại phương Tây với nghệ thuật truyền thống. Kỹ thuật khắc, đắp nổi, dát vàng, mài được thực hiện nhuần nhuyễn, tạo nên hiệu quả tả chất tuyệt vời. Đặc biệt, kỹ thuật gắn trứng điêu luyện của họa sĩ khiến vỏ trứng khô cứng biến hoá thành hiệu ứng mềm mại, sống động, tạo độ chuyển sắc và chiều sâu hiếm thấy trong sơn mài thời kỳ đó.\nTác phẩm đánh dấu quá trình hiện đại hóa hội họa Việt Nam đầu thế kỷ XX, việc sơn mài chuyển từ nghề thủ công trang trí thành nghệ thuật hàn lâm cùng với sự hình thành phong cách riêng của Nguyễn Gia Trí — người được xem là “cha đẻ của sơn mài hiện đại Việt Nam”.\n“Bình phong” cũng là tiền đề cho các kiệt tác sau này như:\n- “Vườn xuân Trung Nam Bắc”\n- Các bộ tranh thiếu nữ sơn mài nổi tiếng khác của Nguyễn Gia Trí.\nTác phẩm được công nhận Bảo vật quốc gia của Việt Nam vào năm 2017.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/binhphong_xtobk2.png",
       "subImages": [
-        "https://upload.wikimedia.org/wikipedia/commons/b/b3/To_Ngoc_Van.jpg",
-        "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600"
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779459140/images849408_nguyen_gia_triportrait_thumb_1__yilrqj.jpg"
       ],
       "audioUrl": "",
       "tags": [
-        "Thiếu nữ bên hoa huệ",
-        "Tô Ngọc Vân",
         "Tranh sơn dầu",
-        "1943",
-        "Mỹ thuật Đông Dương"
+        "Nguyễn Gia Trí"
       ],
       "yearRange": {
-        "from": 1943,
-        "to": 1943
+        "from": 1939,
+        "to": 1939
       },
       "pages": []
     },
@@ -35,11 +31,10 @@
       "isPublished": true,
       "category": "Tranh Sơn Dầu",
       "name": "Em Thúy",
-      "description": "Em Thúy là bức tranh sơn dầu do họa sĩ Trần Văn Cẩn sáng tác năm 1943, mô tả chân dung một bé gái 8 tuổi tên là Minh Thúy. Tác phẩm thể hiện tài năng bậc thầy của họa sĩ trong việc lột tả vẻ trong sáng, ngây thơ nhưng cũng có chút u buồn trong mắt em bé. Bức tranh được công nhận là Bảo vật quốc gia của Việt Nam vào năm 2013 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Việt Nam. Họa sĩ Trần Văn Cẩn (1910–1994) là một trong bộ tứ họa sĩ nổi tiếng 'Trí, Vân, Lân, Cẩn' của nền hội họa hiện đại Việt Nam.",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/4b/Tranh_Em_Thuy.jpg",
+      "description": "“Em Thúy” là tranh sơn dầu do Trần Văn Cẩn sáng tác năm 1943. Nhân vật trong tranh là Nguyễn Thị Thúy, cháu gái của họa sĩ. Tác phẩm được thực hiện trong giai đoạn mỹ thuật Đông Dương phát triển mạnh, khi nhiều họa sĩ Việt Nam tiếp cận kỹ thuật hội họa hàn lâm châu Âu thông qua Trường Cao đẳng Mỹ thuật Đông Dương.\nBức tranh có bố cục tập trung vào một nhân vật duy nhất. Em bé ngồi trên ghế mây, mặc áo trắng, hai tay đặt lên thành ghế và hướng ánh nhìn trực tiếp về phía trước. Không gian phía sau được giản lược chi tiết để tập trung vào biểu cảm khuôn mặt và trạng thái nhân vật.\nTác phẩm sử dụng chất liệu sơn dầu với cách xử lý ánh sáng và màu sắc theo ảnh hưởng của hội họa hiện thực phương Tây. Họa sĩ dùng các gam màu nâu, xám và vàng nhạt để tạo nền, trong khi áo trắng của nhân vật được xử lý bằng nhiều lớp sắc độ thay vì dùng màu trắng đơn thuần. Cách chuyển màu mềm giúp tạo khối cơ thể và chiều sâu không gian.\nMột điểm quan trọng trong giá trị nghệ thuật của tác phẩm là khả năng diễn tả tâm lý nhân vật. Trần Văn Cẩn không xây dựng nhân vật theo hướng tạo dáng trang trọng mà giữ tư thế tự nhiên của trẻ em. Biểu cảm gương mặt và ánh mắt được xử lý chi tiết, tạo cảm giác tập trung và yên tĩnh thay vì mang tính biểu diễn.\nTác phẩm cũng phản ánh sự chuyển đổi của hội họa Việt Nam giai đoạn đầu thế kỷ XX. Kỹ thuật tạo hình, ánh sáng và chất liệu chịu ảnh hưởng từ mỹ thuật châu Âu, nhưng bố cục đơn giản và cách tiết chế chi tiết lại gần với tư duy thẩm mỹ Á Đông. Điều này cho thấy quá trình hình thành phong cách hội họa hiện đại mang bản sắc Việt Nam.\nNăm 2013, “Em Thúy” được công nhận là Bảo vật Quốc gia do giá trị đặc biệt về lịch sử mỹ thuật và tính tiêu biểu đối với tranh chân dung Việt Nam hiện đại. Tác phẩm hiện được lưu giữ tại Bảo tàng Mỹ thuật Việt Nam.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436035/emThuy_qvocum.png",
       "subImages": [
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300",
-        "https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=600"
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779459137/hoa-si-tran-van-can_ycmm8t.jpg"
       ],
       "audioUrl": "",
       "tags": [
@@ -61,11 +56,10 @@
       "isPublished": true,
       "category": "Tranh Sơn Mài",
       "name": "Vườn xuân Trung Nam Bắc",
-      "description": "Vườn xuân Trung Nam Bắc là tác phẩm sơn mài đỉnh cao của danh họa Nguyễn Gia Trí, được thực hiện trong thời gian dài từ năm 1969 đến 1989. Tác phẩm mô tả vẻ đẹp thiên nhiên và con người ba miền Việt Nam trong không khí lễ hội mùa xuân rực rỡ sắc vàng gold. Bức tranh phản ánh khát vọng hòa bình thống nhất đất nước và là một tác phẩm đồ sộ cả về kích thước lẫn giá trị nghệ thuật nghệ thuật sơn mài. Nguyễn Gia Trí (1908–1993) là người đi đầu trong việc chuyển đổi sơn mài từ một nghề thủ công mỹ nghệ thành một chất liệu hội họa bác học.",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/b/bc/Vuon_xuan_Trung_Nam_Bac.jpg",
+      "description": "“Vườn xuân Trung Nam Bắc” là tác phẩm sơn mài của Nguyễn Gia Trí, được thực hiện trong khoảng thời gian từ năm 1969 đến 1989. Đây là một trong những tác phẩm quan trọng nhất của mỹ thuật sơn mài Việt Nam hiện đại và được công nhận là Bảo vật Quốc gia năm 2013. Tác phẩm hiện được lưu giữ tại Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh.\nTác phẩm gồm nhiều tấm vóc ghép lại thành một bố cục lớn, mô tả hình ảnh thiếu nữ trong không gian thiên nhiên trải dài qua ba miền Bắc, Trung và Nam của Việt Nam. Nguyễn Gia Trí không tập trung tái hiện phong cảnh theo hướng hiện thực mà tổ chức không gian theo tính trang trí và nhịp điệu thị giác.\nTrong tranh xuất hiện nhiều hình tượng phụ nữ mặc áo dài, ngồi, đứng hoặc di chuyển giữa cây cối, hoa lá và các khoảng không gian mở. Các nhân vật được bố trí đan xen thay vì tách thành từng nhóm rõ ràng, tạo cảm giác liên tục trong bố cục tổng thể. Không gian tranh không tuân theo phối cảnh tuyến tính của hội họa châu Âu mà được xử lý phẳng và trải rộng theo đặc trưng của nghệ thuật trang trí Á Đông.\nNguyễn Gia Trí xử lý bề mặt tranh bằng kỹ thuật mài để làm lộ các lớp vật liệu bên dưới, tạo độ sâu màu sắc và hiệu ứng ánh sáng đặc trưng của sơn mài. Vỏ trứng được cắt nhỏ và gắn thành các mảng chuyển sắc, giúp tạo chi tiết trang phục, cây lá và ánh sáng trong tranh.\nMột giá trị quan trọng của “Vườn xuân Trung Nam Bắc” là việc đưa sơn mài từ hình thức thủ công trang trí thành một chất liệu hội họa quy mô lớn. Trước giai đoạn của Nguyễn Gia Trí, sơn mài chủ yếu được dùng trong đồ thủ công mỹ nghệ hoặc trang trí nội thất. Tác phẩm này cho thấy khả năng sử dụng sơn mài để xây dựng bố cục phức tạp và ngôn ngữ tạo hình hiện đại.\nTác phẩm cũng phản ánh quá trình kết hợp giữa nghệ thuật truyền thống Việt Nam và tư duy tạo hình hiện đại. Cách tổ chức nhịp điệu hình ảnh, xử lý màu sắc và xây dựng không gian chịu ảnh hưởng từ nghệ thuật trang trí phương Đông, trong khi tư duy bố cục tổng thể và quy mô tác phẩm lại gần với nghệ thuật hiện đại phương Tây.\nTrong lịch sử mỹ thuật Việt Nam, “Vườn xuân Trung Nam Bắc” thường được xem là một trong những tác phẩm tiêu biểu nhất của nghệ thuật sơn mài thế kỷ XX và là tác phẩm đại diện rõ nhất cho phong cách nghệ thuật của Nguyễn Gia Trí.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779437128/vuonxuanTrungNamBac_envfg9.jpg",
       "subImages": [
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300",
-        "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=600"
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779459140/images849408_nguyen_gia_triportrait_thumb_1__yilrqj.jpg"
       ],
       "audioUrl": "",
       "tags": [
@@ -88,11 +82,10 @@
       "isPublished": true,
       "category": "Tranh Sơn Mài",
       "name": "Kết nạp Đảng ở Điện Biên Phủ",
-      "description": "Kết nạp Đảng ở Điện Biên Phủ là bức tranh sơn mài nổi tiếng của họa sĩ Nguyễn Sáng, sáng tác năm 1956. Bức tranh tái hiện thời khắc thiêng liêng và hào hùng của cuộc chiến Điện Biên Phủ lịch sử, ghi lại cảnh kết nạp Đảng ngay tại chiến trường đầy khói lửa. Tác phẩm nổi bật với ngôn ngữ tạo hình mạnh mẽ, dứt khoát, bảng màu sơn mài trầm ấm mang tính biểu cảm cao. Nguyễn Sáng (1923–1988) tốt nghiệp trường Mỹ thuật Gia Định và Mỹ thuật Đông Dương, nổi tiếng với tinh thần cách mạng và nghệ thuật chân thực, giàu cảm xúc.",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/8/87/Ket_nap_Dang_o_Dien_Bien_Phu.jpg",
+      "description": "“Kết nạp Đảng ở Điện Biên Phủ” là tác phẩm sơn mài của Nguyễn Sáng được sáng tác năm 1963. Tác phẩm tái hiện một buổi lễ kết nạp Đảng diễn ra ngay trong chiến dịch Điện Biên Phủ năm 1954, khi cuộc kháng chiến chống Pháp đang ở giai đoạn quyết định. Bức tranh được công nhận là Bảo vật Quốc gia năm 2013 và hiện lưu giữ tại Bảo tàng Mỹ thuật Việt Nam.\nTác phẩm được xây dựng theo bố cục nhóm nhân vật. Trung tâm tranh là người chiến sĩ đang tuyên thệ kết nạp Đảng, xung quanh là các đồng đội đứng trong không gian chiến hào. Nguyễn Sáng không mô tả chiến trường theo hướng chi tiết hiện thực mà tập trung vào trạng thái tinh thần và tính biểu tượng của sự kiện.\nKhông gian tranh sử dụng gam màu trầm gồm nâu, đen, đỏ và vàng. Ánh sáng được tiết chế, chủ yếu tập trung vào khuôn mặt và bàn tay nhân vật nhằm nhấn mạnh hành động tuyên thệ. Cách xử lý này tạo tương phản mạnh giữa nhân vật và nền tối của chiến hào.\nVề kỹ thuật, tác phẩm sử dụng chất liệu sơn mài truyền thống nhưng được xử lý theo hướng hội họa hiện đại. Nguyễn Sáng kết hợp sơn then, sơn son, vàng quỳ, kỹ thuật mài nhiều lớp để tạo chiều sâu màu sắc và bề mặt. Khác với sơn mài trang trí truyền thống vốn thiên về họa tiết và tính thủ công, tác phẩm hướng đến biểu đạt cảm xúc và cấu trúc tạo hình mạnh.\nMột đặc điểm quan trọng của tranh là cách giản lược hình khối. Nhân vật không được diễn tả quá chi tiết về trang phục hay bối cảnh mà được khái quát bằng các mảng lớn và đường nét chắc. Điều này giúp tập trung vào nhịp điệu bố cục và tinh thần tập thể của nhóm nhân vật.\n\nTác phẩm phản ánh một xu hướng quan trọng của mỹ thuật Việt Nam giai đoạn sau kháng chiến chống Pháp: sử dụng nghệ thuật để ghi lại các sự kiện lịch sử và xây dựng hình tượng người chiến sĩ cách mạng. Tuy nhiên, Nguyễn Sáng không tiếp cận hoàn toàn theo hướng minh họa tuyên truyền mà vẫn giữ tư duy tạo hình hiện đại thông qua cấu trúc hình khối và xử lý chất liệu.\n“Kết nạp Đảng ở Điện Biên Phủ” được xem là một trong những tác phẩm sơn mài tiêu biểu của mỹ thuật cách mạng Việt Nam thế kỷ XX. Giá trị của tác phẩm nằm ở cả nội dung lịch sử lẫn đóng góp trong việc mở rộng khả năng biểu đạt của chất liệu sơn mài trong hội họa hiện đại Việt Nam.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436036/ketnapDangoDBP_epye5f.png",
       "subImages": [
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300",
-        "https://images.unsplash.com/photo-1580136579312-94651dfd596d?q=80&w=600"
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779460752/s-1_bit9zk.png"
       ],
       "audioUrl": "",
       "tags": [
@@ -114,11 +107,10 @@
       "isPublished": true,
       "category": "Tranh Sơn Dầu",
       "name": "Hai thiếu nữ và em bé",
-      "description": "Hai thiếu nữ và em bé là một kiệt tác sơn dầu khác của Tô Ngọc Vân sáng tác năm 1944. Bức tranh vẽ hai cô gái trong trang phục áo dài truyền thống đang ngồi trò chuyện bên thềm nhà, cạnh bên là một em bé đang chơi đùa. Bức tranh thể hiện không gian thanh bình, nhẹ nhàng và tôn vinh nét đẹp dịu hiền, đằm thắm của phụ nữ Việt Nam xưa. Bức tranh đã được công nhận là Bảo vật quốc gia năm 2013 và hiện trưng bày tại Bảo tàng Mỹ thuật Việt Nam.",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/vi/4/49/Hai_thieu_nu_va_em_be.jpg",
+      "description": "“Hai thiếu nữ và em bé” là tác phẩm sơn dầu của Tô Ngọc Vân được sáng tác năm 1944, trong giai đoạn cuối của mỹ thuật Đông Dương trước Cách mạng tháng Tám. Tác phẩm được công nhận là Bảo vật Quốc gia năm 2013 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Việt Nam.\nBức tranh mô tả hai phụ nữ mặc áo dài cùng một em bé trong không gian nội thất. Các nhân vật được bố trí theo dạng tam giác cân bằng, tạo sự ổn định cho bố cục tổng thể. Nhân vật chính ngồi ở trung tâm tranh, nhân vật còn lại đứng phía sau, trong khi em bé xuất hiện ở phần dưới bố cục, tạo liên kết thị giác giữa các nhân vật.\nKhông gian trong tranh được xử lý đơn giản với ít chi tiết nội thất. Tô Ngọc Vân tập trung vào mối quan hệ giữa con người, ánh sáng và màu sắc thay vì mô tả bối cảnh cụ thể. Ánh sáng được phân bổ mềm trên gương mặt, trang phục và làn da nhân vật, tạo cảm giác nhẹ và ổn định về thị giác.\nTác phẩm sử dụng chất liệu sơn dầu theo kỹ thuật hội họa hàn lâm phương Tây. Các lớp màu được chuyển mịn để tạo khối cơ thể và chiều sâu không gian. Gam màu chủ đạo gồm vàng nhạt, nâu, trắng và xanh xám, giúp duy trì sự thống nhất màu sắc trong toàn bộ tranh.\nMột giá trị nghệ thuật quan trọng của tác phẩm là cách xử lý trang phục áo dài. Thay vì mô tả chi tiết hoa văn hoặc chất liệu, họa sĩ tập trung vào nhịp điệu đường nét và độ rủ của vải để tạo cảm giác mềm và liên tục trong bố cục. Điều này cho thấy sự kết hợp giữa kỹ thuật tạo hình phương Tây với quan niệm thẩm mỹ Á Đông.\nTác phẩm cũng phản ánh xu hướng của mỹ thuật Đông Dương giai đoạn đầu thế kỷ XX, khi các họa sĩ Việt Nam bắt đầu xây dựng hình tượng phụ nữ Việt Nam hiện đại trong hội họa. Nhân vật trong tranh không được thể hiện như hình mẫu cung đình hay nhân vật dân gian mà mang hình ảnh của tầng lớp thị dân Hà Nội thời kỳ thuộc địa.\nKhác với tranh hiện thực châu Âu tập trung mạnh vào không gian và phối cảnh, “Hai thiếu nữ và em bé” có xu hướng tiết chế chiều sâu không gian để ưu tiên sự hài hòa của bố cục và màu sắc. Điều này giúp tác phẩm giữ được tính trang trí đặc trưng của hội họa Việt Nam thời kỳ đầu hiện đại.\nTrong lịch sử mỹ thuật Việt Nam, tác phẩm được xem là đại diện tiêu biểu cho phong cách hội họa của Tô Ngọc Vân trước thời kỳ kháng chiến, đồng thời phản ánh quá trình tiếp nhận và chuyển hóa nghệ thuật phương Tây trong hội họa Việt Nam thế kỷ XX.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436034/2thieunuvaembe_zwe9sf.png",
       "subImages": [
-        "https://upload.wikimedia.org/wikipedia/commons/b/b3/To_Ngoc_Van.jpg",
-        "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=600"
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779459101/ex_k5zlcs.jpg"
       ],
       "audioUrl": "",
       "tags": [
@@ -133,6 +125,122 @@
         "to": 1944
       },
       "pages": []
+    },
+    {
+      "id": "Exhibit_6",
+      "order": 6,
+      "isPublished": true,
+      "category": "Tranh Sơn mài",
+      "name": "Gióng",
+      "description": "“Gióng” là tác phẩm hội họa của Nguyễn Tư Nghiêm lấy cảm hứng từ truyền thuyết Thánh Gióng — một trong những hình tượng quan trọng của văn hóa dân gian Việt Nam. Tác phẩm thuộc chuỗi sáng tác dài của Nguyễn Tư Nghiêm về đề tài dân gian và lịch sử dân tộc, được thực hiện chủ yếu từ những năm 1970 trở đi. Bộ tác phẩm “Gióng” được công nhận là Bảo vật Quốc gia năm 2018 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Việt Nam.\nThay vì mô tả câu chuyện Thánh Gióng theo hướng minh họa hiện thực, Nguyễn Tư Nghiêm tập trung vào cấu trúc hình học, nhịp điệu đường nét và tính biểu tượng của hình tượng nhân vật. Trong tranh, hình ảnh Thánh Gióng, ngựa sắt và chuyển động chiến trận được giản lược thành các mảng màu và đường nét mạnh, tạo cảm giác chuyển động liên tục trên toàn bộ bề mặt tranh.\nCác nhân vật và hình khối thường được xử lý theo hướng phẳng, ít tạo chiều sâu phối cảnh. Không gian tranh không xây dựng theo quy luật thị giác châu Âu mà tổ chức theo nhịp điệu trang trí và sự lặp lại hình khối.\nVề màu sắc, Nguyễn Tư Nghiêm sử dụng các gam màu mạnh như đỏ, vàng, đen, xanh và nâu. Màu được đặt thành từng mảng lớn có độ tương phản cao thay vì chuyển sắc mềm. Điều này giúp tăng tính nhịp điệu và cảm giác chuyển động trong bố cục.\nMột giá trị nghệ thuật quan trọng của “Gióng” là cách họa sĩ hiện đại hóa chất liệu và hình tượng truyền thống. Nguyễn Tư Nghiêm không sao chép trực tiếp nghệ thuật dân gian mà tái cấu trúc các yếu tố cổ truyền bằng tư duy tạo hình hiện đại. Các hình tượng trong tranh được đơn giản hóa, biến dạng và tổ chức lại để nhấn mạnh tiết tấu thị giác thay vì tính tả thực.\nBộ tác phẩm cũng phản ánh định hướng nghệ thuật xuyên suốt của Nguyễn Tư Nghiêm: xây dựng ngôn ngữ hội họa hiện đại dựa trên văn hóa truyền thống Việt Nam. Trong giai đoạn nhiều họa sĩ chịu ảnh hưởng mạnh từ hội họa phương Tây, ông lựa chọn khai thác mỹ thuật dân gian và điêu khắc cổ như nền tảng chính cho phong cách cá nhân.\nTrong lịch sử mỹ thuật Việt Nam hiện đại, “Gióng” được xem là một trong những tác phẩm tiêu biểu cho xu hướng kết hợp giữa nghệ thuật hiện đại và di sản văn hóa dân gian Việt Nam ở thế kỷ XX.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436036/Giong_ywdq75.png",
+      "subImages": [
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779551106/hoa-si-nguyen-tu-nghiem_ppriom.webp"
+      ],
+      "pages": [],
+      "yearRange": {
+        "from": 1990,
+        "to": 1990
+      },
+      "tags": [
+        "Sơn mài"
+      ]
+    },
+    {
+      "id": "Exhibit_7",
+      "order": 7,
+      "isPublished": true,
+      "category": "Gỗ phủ sơn",
+      "name": "Tượng Phật bà Quan Âm chùa Hội Hạ",
+      "description": "Tượng Phật bà Quan Âm chùa Hội Hạ là tác phẩm điêu khắc Phật giáo có niên đại khoảng thế kỷ XVI, thuộc thời Mạc. ượng Phật Bà Quan Âm chùa Hội Hạ có kết cấu chia làm 3 phần: phần tượng Quan Âm 42 tay ngự trên đài sen / quỉ đội đài sen cùng các chi tiết phụ trợ như: Kim đồng, Ngọc nữ, đầu rồng ở giữa / phần bệ lục giác được chạm khắc tinh sảo với các mô típ điển hình như: chim thần garuda, rồng mây, rồng chạm dạng kỷ hà, cá hóa rồng… \nPhần tượng Quan Âm được tạc trong thế ngồi thiền, khuôn mặt từ bi, mang đậm nét chân dung người Việt. Tượng có 42 tay gồm: một đôi chắp trước ngực thế Liên hoa hợp chưởng ấn, một đôi đặt trong lòng kết ấn Thiền định, các đôi tay khác tỏa đều sang hai bên với các thế ấn khác nhau và các bảo pháp của Phật giáo.\nBệ sen có 3 lớp cánh sen múp tròn, mang những trang trí rất đặc trưng cho nghệ thuật thế kỷ XVI, là những đường chỉ xoắn dạng tay mướp ở đầu cánh sen.\nChi tiết tượng Kim Đồng, Ngọc Nữ tọa trên 2 đài sen nhỏ được tạo hình rất tinh tế mọc lên từ bệ lục giác, kề sát hai bên bệ sen là chi tiết rất riêng biệt độc đáo của pho tượng Quan Âm này so với các tác phẩm cùng thể loại.\nBệ lục giác dưới cùng được chạm khắc với những biểu tượng về vũ trụ quan: Mặt của bệ tượng trưng cho mặt biển, chính giữa bệ đầu quỉ Ô Ba Na Đà nhô lên dang hai tay đỡ bệ sen gắn liền với truyền thuyết Quan Âm Nam Hải. Thân bệ được tạo hình thắt ở phần giữa với 6 con chim thần Garuda ngự ở 6 góc bệ. Hình tượng chim Garuda này mang dấu ấn của nghệ thuật Phật giáo giai đoạn sớm có tính kế thừa lối chạm khắc bệ tượng hoa sen thời Trần (TK XIII-XIV). Ngoài ra trên các cạnh lục giác còn chạm rất nhiều các biểu tượng đặc sắc khác như: hình lá đề chạm rồng, rồng mây, rồng chạm dạng kỷ hà, cá hóa rồng, hoa sen, hoa cúc…\nTác phẩm được Thủ tướng Chính phủ nước CHXHCN Việt Nam công nhận là “Bảo vật quốc gia” năm 2013.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436037/phatbaquanam_rshnki.png",
+      "subImages": [],
+      "pages": [],
+      "yearRange": {
+        "from": 1700,
+        "to": 1700
+      },
+      "tags": [
+        "Thế kỷ 16",
+        "Gỗ phủ sơn"
+      ]
+    },
+    {
+      "id": "Exhibit_8",
+      "order": 8,
+      "isPublished": true,
+      "category": "Gỗ phủ sơn",
+      "name": "Hoàng Hậu Trịnh Thị Ngọc Trúc",
+      "description": "Tượng Hoàng hậu Trịnh Thị Ngọc Trúc là tác phẩm điêu khắc gỗ có niên đại khoảng thế kỷ XVII, thuộc giai đoạn Hậu Lê. Tượng hiện được lưu giữ tại Chùa Mật và được công nhận là Bảo vật Quốc gia năm 2015.\nNhân vật được thể hiện trong tượng là Trịnh Thị Ngọc Trúc, hoàng hậu của vua Lê Thần Tông và là một nhân vật có vị trí quan trọng trong hoàng tộc thời Lê – Trịnh. Sau khi qua đời, bà được thờ theo truyền thống thờ tượng hậu trong chùa Việt Nam, hình thức phổ biến đối với các nhân vật có công với Phật giáo hoặc hoạt động công đức lớn đối với chùa chiền.\n\nTượng được chế tác bằng gỗ, phủ sơn son thếp vàng theo kỹ thuật truyền thống. Khác với nhiều tượng Phật hoặc tượng thờ mang tính biểu tượng cao, tác phẩm này có xu hướng chân dung hóa rõ hơn. Khuôn mặt tượng được tạo hình đầy đặn, tỷ lệ cân đối, mắt nhìn nhẹ xuống và biểu cảm tương đối điềm tĩnh. Các chi tiết như sống mũi, miệng, gò má và đường viền khuôn mặt được xử lý cụ thể thay vì khái quát hoàn toàn.\nTrang phục tượng phản ánh đặc điểm phục sức cung đình thời Lê – Trịnh với nhiều lớp áo và các nếp gấp được tổ chức theo nhịp đối xứng. Nghệ nhân không đi sâu mô tả chi tiết hoa văn mà tập trung vào cấu trúc khối và sự ổn định của tổng thể tượng. Điều này giúp tác phẩm giữ được tính trang nghiêm phù hợp với không gian thờ tự.\nMột giá trị nghệ thuật quan trọng của tác phẩm là khả năng kết hợp giữa nghệ thuật điêu khắc tôn giáo và đặc điểm chân dung nhân vật lịch sử. Trong nghệ thuật điêu khắc Việt Nam thời phong kiến, số lượng tượng chân dung có xác định danh tính cụ thể không nhiều, đặc biệt là tượng phụ nữ hoàng tộc. Vì vậy, tượng Hoàng hậu Trịnh Thị Ngọc Trúc được xem là tư liệu quan trọng cho nghiên cứu mỹ thuật và trang phục cung đình thế kỷ XVII.\nTác phẩm cũng phản ánh kỹ thuật điêu khắc gỗ phát triển của nghệ thuật truyền thống Bắc Bộ. Các phần đầu tượng, bàn tay và nếp áo được xử lý theo lối bo mềm, hạn chế góc cạnh mạnh. Lớp sơn son thếp vàng không chỉ có chức năng trang trí mà còn giúp bảo vệ bề mặt gỗ trong điều kiện khí hậu nhiệt đới.\nTrong lịch sử mỹ thuật Việt Nam, tượng Hoàng hậu Trịnh Thị Ngọc Trúc là một trong những tác phẩm tiêu biểu cho loại hình tượng hậu thời Lê Trung Hưng, đồng thời cung cấp tư liệu trực tiếp về nghệ thuật điêu khắc cung đình và tín ngưỡng Phật giáo Việt Nam thế kỷ XVII.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436035/HoanghauTrinhThiNgocTruc_aclmeh.png",
+      "subImages": [],
+      "pages": [],
+      "yearRange": {
+        "from": 1701,
+        "to": 1701
+      },
+      "tags": [
+        "Thế kỷ 17",
+        "Gỗ phủ sơn"
+      ]
+    },
+    {
+      "id": "Exhibit_9",
+      "order": 9,
+      "isPublished": true,
+      "category": "Gỗ",
+      "name": "Cánh cửa chạm rồng",
+      "description": "“Cánh cửa chạm rồng” là hiện vật điêu khắc gỗ có niên đại khoảng thế kỷ XVII–XVIII, thuộc giai đoạn Lê Trung Hưng. Tác phẩm được công nhận là Bảo vật Quốc gia năm 2017 và là một ví dụ tiêu biểu của nghệ thuật chạm khắc gỗ truyền thống Việt Nam trong kiến trúc đình chùa và công trình tôn giáo.\nHiện vật được chế tác bằng gỗ lớn, cấu tạo theo dạng cửa hai cánh. Toàn bộ bề mặt được phủ kín bởi các họa tiết chạm nổi, trong đó hình tượng rồng giữ vai trò trung tâm. Rồng xuất hiện trong tư thế uốn dài liên tục theo chiều dọc cánh cửa, kết hợp với mây, sóng và các họa tiết thực vật tạo thành bố cục dày đặc.\nHình tượng rồng trong tác phẩm mang đặc điểm của mỹ thuật thời Lê Trung Hưng thân dài, mềm, chuyển động liên tục, đầu nhỏ, bờm và râu kéo dài, đường nét thiên về nhịp điệu trang trí hơn là mô tả tự nhiên\nKhác với hình tượng rồng thời Lý hoặc Trần vốn thanh mảnh và đơn giản hơn, rồng thời Lê Trung Hưng thường có cấu trúc phức tạp và mật độ chi tiết cao, phản ánh xu hướng trang trí mạnh của mỹ thuật giai đoạn này.\nVề kỹ thuật, tác phẩm sử dụng phương pháp chạm nổi kết hợp chạm sâu để tạo nhiều lớp không gian trên cùng một bề mặt gỗ. Nghệ nhân xử lý độ cao thấp khác nhau giữa các mảng họa tiết nhằm tạo chiều sâu thị giác và hiệu ứng ánh sáng khi nhìn từ nhiều góc độ.\nMột giá trị nghệ thuật quan trọng của hiện vật là cách tổ chức bố cục liên tục trên diện tích lớn. Các họa tiết không bị chia thành từng ô độc lập mà liên kết thành một hệ thống chuyển động xuyên suốt hai cánh cửa. Điều này cho thấy trình độ thiết kế và tư duy không gian phát triển của nghệ thuật chạm khắc gỗ truyền thống Việt Nam.\nTác phẩm cũng phản ánh vai trò của hình tượng rồng trong văn hóa Việt Nam thời phong kiến. Rồng là biểu tượng gắn với quyền lực, tín ngưỡng và quan niệm về sự bảo hộ linh thiêng. Trong kiến trúc đình chùa, hình tượng này thường xuất hiện tại các vị trí quan trọng như cửa, cột, bệ thờ hoặc mái kiến trúc.\nDo được sử dụng trong không gian kiến trúc tôn giáo, hiện vật không chỉ có chức năng trang trí mà còn mang ý nghĩa nghi lễ và biểu tượng. Cánh cửa đồng thời là bộ phận kiến trúc và một tác phẩm điêu khắc hoàn chỉnh.\nTrong lịch sử mỹ thuật Việt Nam, “Cánh cửa chạm rồng” được xem là tư liệu quan trọng cho việc nghiên cứu nghệ thuật chạm khắc gỗ thời Lê Trung Hưng, đặc biệt về kỹ thuật tạo hình, tổ chức hoa văn và biểu tượng trang trí trong kiến trúc truyền thống Việt Nam.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436034/canhcuachamrong_pd2jd9.png",
+      "subImages": [],
+      "pages": [],
+      "yearRange": null,
+      "tags": [
+        "Gỗ",
+        "Thế kỷ 17"
+      ]
+    },
+    {
+      "id": "Exhibit_10",
+      "order": 10,
+      "isPublished": true,
+      "category": "Tranh Sơn mài",
+      "name": "Bác Hồ ở chiến khu Việt Bắc",
+      "description": "“Bác Hồ ở chiến khu Việt Bắc” là tác phẩm tranh lụa của Dương Bích Liên được sáng tác khoảng năm 1980. Tác phẩm tái hiện hình ảnh Chủ tịch Hồ Chí Minh trong thời kỳ kháng chiến chống Pháp tại chiến khu Việt Bắc — căn cứ địa quan trọng của cách mạng Việt Nam giai đoạn 1946–1954. Tác phẩm được công nhận là Bảo vật Quốc gia năm 2021 và hiện lưu giữ tại Bảo tàng Mỹ thuật Việt Nam.\nKhác với nhiều tác phẩm cùng đề tài mang tính tuyên truyền hoặc mô tả hoạt động chính trị, Dương Bích Liên lựa chọn cách tiếp cận thiên về không gian đời sống và trạng thái tinh thần nhân vật. Hình ảnh Bác Hồ được đặt trong khung cảnh giản dị của chiến khu, không nhấn mạnh nghi lễ hay tính biểu tượng quyền lực.\nBố cục tranh tương đối đơn giản, tập trung vào nhân vật chính cùng môi trường xung quanh. Các chi tiết được tiết chế để duy trì sự ổn định và yên tĩnh của không gian. Họa sĩ không xây dựng chiều sâu phối cảnh mạnh mà sử dụng các lớp hình và sắc độ nhẹ để tạo khoảng cách trong tranh.\nTác phẩm sử dụng chất liệu lụa — một chất liệu quan trọng của hội họa Việt Nam hiện đại từ thời mỹ thuật Đông Dương. Với đặc tính thấm màu và bề mặt mềm, tranh lụa phù hợp với các gam màu nhẹ và cách chuyển sắc chậm. Dương Bích Liên khai thác đặc điểm này bằng các màu nâu, xám, vàng nhạt và xanh trầm để tạo không khí tĩnh và giản dị.\nMột giá trị nghệ thuật quan trọng của tác phẩm là cách xử lý nhân vật. Bác Hồ không được lý tưởng hóa bằng các chi tiết hình khối mạnh hoặc ánh sáng kịch tính. Thay vào đó, họa sĩ tập trung vào tư thế ngồi, nét mặt và sự hòa nhập của nhân vật với không gian chiến khu. Điều này tạo cảm giác gần với chân dung đời sống hơn là hình tượng tuyên truyền.\nTác phẩm cũng phản ánh phong cách hội họa của Dương Bích Liên. Ông là họa sĩ chú trọng biểu cảm nội tâm và không khí cảm xúc hơn là mô tả hiện thực chi tiết. Trong nhiều tác phẩm của mình, nhân vật thường được xử lý bằng đường nét mềm và sắc độ mờ, tạo cảm giác lặng và có khoảng cách thị giác.\nTrong lịch sử mỹ thuật Việt Nam, “Bác Hồ ở chiến khu Việt Bắc” là một tác phẩm tiêu biểu cho tranh lụa hiện đại giai đoạn sau kháng chiến, đồng thời cho thấy cách các họa sĩ Việt Nam tiếp cận đề tài lịch sử bằng ngôn ngữ tạo hình mang tính cá nhân và giàu yếu tố cảm xúc nội tâm.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436034/BacHoochienkhuVietBac_u9wtk4.png",
+      "subImages": [
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779557830/DuongBichLien_ojgu31.jpg"
+      ],
+      "pages": [],
+      "yearRange": {
+        "from": 1980,
+        "to": 1980
+      },
+      "tags": [
+        "1980",
+        "Tranh Sơn mài"
+      ]
+    },
+    {
+      "id": "Exhibit_11",
+      "order": 11,
+      "isPublished": true,
+      "category": "Tranh Sơn Mài",
+      "name": "Thanh niên Thành đồng",
+      "description": "“Thanh niên Thành đồng” là tác phẩm sơn mài của Nguyễn Sáng được sáng tác năm 1978, sau khi chiến tranh Việt Nam kết thúc. Tác phẩm phản ánh hình ảnh thanh niên miền Nam trong thời kỳ kháng chiến chống Mỹ, gắn với khái niệm “Thành đồng Tổ quốc” — cách gọi biểu tượng dành cho miền Nam Việt Nam trong giai đoạn chiến tranh. Tác phẩm được công nhận là Bảo vật Quốc gia năm 2017 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh.\nBức tranh được xây dựng theo bố cục nhóm nhân vật với các thanh niên đứng sát nhau trong một không gian khái quát. Nguyễn Sáng không tập trung mô tả bối cảnh cụ thể mà nhấn mạnh vào hình khối nhân vật và nhịp điệu tổng thể của bố cục. Các nhân vật được tạo bằng những mảng lớn, đường nét chắc và ít chi tiết nhỏ.\nTác phẩm sử dụng gam màu trầm đặc trưng của sơn mài như đen, nâu, đỏ son và vàng. Ánh sáng không được xử lý theo hướng tự nhiên mà chủ yếu xuất hiện dưới dạng các mảng tương phản giữa sáng và tối để làm rõ cấu trúc hình thể. Điều này giúp tăng tính khái quát và sự ổn định của bố cục.\nVề kỹ thuật, Nguyễn Sáng sử dụng chất liệu sơn mài truyền thống nhưng khai thác theo hướng hội họa hiện đại. Các lớp sơn được mài để tạo độ sâu màu sắc và hiệu ứng bề mặt. Thay vì tập trung vào yếu tố trang trí như sơn mài cổ truyền, tác phẩm hướng đến biểu đạt cảm xúc và cấu trúc tạo hình.\nMột giá trị nghệ thuật quan trọng của “Thanh niên Thành đồng” là cách giản lược hình thể. Nhân vật không được diễn tả chi tiết về giải phẫu hay trang phục mà được khái quát thành các khối lớn có nhịp điệu liên kết với nhau. Cách xử lý này giúp tác phẩm có tính biểu tượng cao và tạo cảm giác tập thể thay vì nhấn mạnh từng cá nhân riêng lẻ.\nTác phẩm cũng phản ánh xu hướng của mỹ thuật Việt Nam giai đoạn sau chiến tranh, khi nhiều họa sĩ tập trung khai thác đề tài lịch sử và con người trong kháng chiến. Tuy nhiên, Nguyễn Sáng không tiếp cận theo hướng minh họa hiện thực đơn thuần mà sử dụng ngôn ngữ tạo hình mang tính hiện đại, đặc biệt trong cách tổ chức mảng và xử lý chất liệu sơn mài.\nTrong lịch sử mỹ thuật Việt Nam hiện đại, “Thanh niên Thành đồng” được xem là một trong những tác phẩm tiêu biểu của sơn mài cách mạng sau năm 1975, đồng thời thể hiện rõ phong cách tạo hình mạnh và khái quát của Nguyễn Sáng trong giai đoạn cuối sự nghiệp.",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436038/thanhnienthanhdong_pase73.jpg",
+      "subImages": [
+        "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779460752/s-1_bit9zk.png"
+      ],
+      "pages": [],
+      "yearRange": {
+        "from": 1967,
+        "to": 1978
+      },
+      "tags": [
+        "Tranh Sơn Mài",
+        "Nguyễn Sáng"
+      ]
     }
   ]
 }
