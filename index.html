@@ -308,6 +308,25 @@
     input.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) sendMessage(); });
     sendBtn.addEventListener("click", sendMessage);
 
+    // ── Chặn Unity bắt keyboard khi chat đang focus ──────────────────────
+    // Khi input được focus: báo Unity ngừng xử lý phím tắt (A/D/Tab/...)
+    // Khi input blur (mất focus): trả quyền điều khiển lại cho Unity
+    window.chatInputActive = false;
+
+    input.addEventListener("focus", () => {
+      window.chatInputActive = true;
+      console.log("[ChatBridge] Chat input active — Unity keyboard blocked.");
+    });
+
+    input.addEventListener("blur", () => {
+      window.chatInputActive = false;
+      console.log("[ChatBridge] Chat input inactive — Unity keyboard restored.");
+    });
+
+    // Chặn sự kiện keyboard lan ra ngoài input (phòng ngừa thêm)
+    input.addEventListener("keydown", e => e.stopPropagation());
+    input.addEventListener("keyup",   e => e.stopPropagation());
+
     function addMsg(text, role) {
       const div = document.createElement("div");
       div.className = "msg " + role;
