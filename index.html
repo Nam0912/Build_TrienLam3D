@@ -54,47 +54,6 @@
     @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
     #loading-pct { color: #8A7560; font-size: 12px; margin-top: 12px; }
 
-    /* ===== VIDEO INTRO ===== */
-    #intro-overlay {
-      position: fixed; inset: 0; z-index: 99999;
-      background: #000;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      transition: opacity .8s ease;
-    }
-    #intro-overlay.hidden { opacity: 0; pointer-events: none; }
-
-    #intro-video {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-
-    /* Dùng YouTube embed thay vì file video trực tiếp */
-    #intro-iframe {
-      width: 100%; height: 100%;
-      border: none;
-    }
-
-    #intro-skip {
-      position: absolute; bottom: 32px; right: 32px;
-      background: rgba(0,0,0,.55);
-      border: 1px solid rgba(255,255,255,.3);
-      color: #fff; font-family: 'Inter', sans-serif;
-      font-size: 14px; padding: 8px 20px;
-      border-radius: 24px; cursor: pointer;
-      backdrop-filter: blur(6px);
-      transition: background .2s, border-color .2s;
-      z-index: 100000;
-    }
-    #intro-skip:hover { background: rgba(196,148,26,.7); border-color: #C4941A; }
-
-    #intro-logo {
-      position: absolute; top: 24px; left: 32px;
-      font-family: 'Playfair Display', serif;
-      color: rgba(255,255,255,.85); font-size: 16px;
-      letter-spacing: 2px; text-shadow: 0 2px 8px rgba(0,0,0,.8);
-    }
-
     /* ===== CHAT FAB ===== */
     #chat-fab {
       position: fixed; bottom: 28px; right: 28px; z-index: 1000;
@@ -139,13 +98,24 @@
       border-bottom: 1px solid #3D3020;
       display: flex; align-items: center; gap: 10px;
     }
-    #chat-header .dot { width: 8px; height: 8px; border-radius: 50%; background: #C4941A; box-shadow: 0 0 6px #C4941A; }
+    #chat-header .dot { width: 8px; height: 8px; border-radius: 50%; background: #C4941A; box-shadow: 0 0 6px #C4941A; animation: pulse-ring 3s ease infinite; }
     #chat-header .title {
       font-family: 'Playfair Display', serif;
       font-size: 14px; font-weight: 700;
       color: #E8B84B; flex: 1;
     }
     #chat-header .sub { font-size: 10px; color: #8A7560; }
+    /* Badge hiển thị ngữ cảnh RAG hiện tại */
+    #context-badge {
+      font-size: 9px; color: #5C4A2A;
+      background: rgba(196,148,26,.08);
+      border: 1px solid rgba(196,148,26,.2);
+      border-radius: 10px; padding: 2px 8px;
+      max-width: 100px; overflow: hidden;
+      text-overflow: ellipsis; white-space: nowrap;
+      transition: all .3s;
+    }
+    #context-badge.active { color: #C4941A; border-color: rgba(196,148,26,.5); background: rgba(196,148,26,.12); }
     #chat-close { background: none; border: none; color: #8A7560; cursor: pointer; font-size: 18px; padding: 4px; transition: color .2s; }
     #chat-close:hover { color: #C45A3C; }
 
@@ -227,28 +197,6 @@
   <!-- Unity Canvas -->
   <canvas id="unity-canvas" tabindex="-1"></canvas>
 
-  <!-- ===== VIDEO INTRO OVERLAY ===== -->
-  <!-- Thay YOUR_YOUTUBE_VIDEO_ID bang ID video YouTube cua ban -->
-  <!-- Vi du: https://youtu.be/dQw4w9WgXcQ → ID la dQw4w9WgXcQ -->
-  <!-- De tat video intro: xoa toan bo the div nay hoac set INTRO_ENABLED = false trong JS -->
-  <div id="intro-overlay">
-    <div id="intro-logo">🏛️ TRIỂN LÃM MỸ THUẬT VIỆT NAM 3D</div>
-
-    <!-- Dùng <video> nếu host file trực tiếp (Cloudinary/server) -->
-    <!-- <video id="intro-video" autoplay muted playsinline>
-      <source src="https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto/YOUR_VIDEO.mp4" type="video/mp4">
-    </video> -->
-
-    <!-- Dùng YouTube embed (khuyến nghị — nhẹ nhất, không tốn băng thông server) -->
-    <iframe id="intro-iframe"
-      src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?autoplay=1&mute=0&controls=0&rel=0&showinfo=0&modestbranding=1&enablejsapi=1"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-
-    <button id="intro-skip" onclick="skipIntro()">Bỏ qua ⏭</button>
-  </div>
-
   <!-- Loading Overlay -->
   <div id="loading-overlay">
     <div id="loading-title">🏛️ TRIỂN LÃM MỸ THUẬT 3D</div>
@@ -265,10 +213,12 @@
   <div id="chat-panel">
     <div id="chat-header">
       <div class="dot"></div>
-      <div>
-        <div class="title">Hướng Dẫn Viên Ảo</div>
-        <div class="sub">Được hỗ trợ bởi Gemini AI</div>
+      <div style="flex:1">
+        <div class="title">Tư Vấn Viên Ảo</div>
+        <div class="sub">Được hỗ trợ bởi Gemini AI + RAG</div>
       </div>
+      <!-- Badge hiển thị sự kiện đang xem (cập nhật tự động từ Unity) -->
+      <span id="context-badge" title="Đang xem sự kiện này">Chung</span>
       <button id="chat-close">✕</button>
     </div>
 
@@ -289,38 +239,7 @@
   <!-- Unity WebGL Loader -->
   <script src="Build/DoAnTN_Build.loader.js"></script>
   <script>
-    // ===== VIDEO INTRO =====
-    const introOverlay = document.getElementById("intro-overlay");
-
-    function skipIntro() {
-      if (!introOverlay) return;
-      // Dung iframe YouTube neu dang phat
-      const iframe = document.getElementById("intro-iframe");
-      if (iframe) iframe.src = ""; // Dung video, tranh tiep tuc buffer
-      introOverlay.classList.add("hidden");
-      setTimeout(() => introOverlay.remove(), 900);
-    }
-
-    // Dung <video> tag (neu khong dung YouTube embed)
-    const introVideo = document.getElementById("intro-video");
-    if (introVideo) {
-      introVideo.addEventListener("ended", skipIntro);
-    }
-
-    // YouTube IFrame API: tu dong skip khi video ket thuc
-    window.onYouTubeIframeAPIReady = function() {};
-    window.addEventListener("message", function(e) {
-      try {
-        const data = JSON.parse(e.data);
-        // playerState = 0 nghia la video da ket thuc
-        if (data.event === "infoDelivery" && data.info && data.info.playerState === 0) {
-          skipIntro();
-        }
-      } catch (_) {}
-    });
-
     // ===== UNITY LOADING =====
-    // Unity load SONG SONG trong nen khi video dang phat
     const canvas = document.getElementById("unity-canvas");
     const loadOverlay = document.getElementById("loading-overlay");
     const barFill = document.getElementById("loading-bar-fill");
@@ -344,12 +263,34 @@
     }).catch(err => console.error("Unity load error:", err));
 
     // ===== CHAT WIDGET =====
-    const fab = document.getElementById("chat-fab");
-    const panel = document.getElementById("chat-panel");
-    const closeBtn = document.getElementById("chat-close");
-    const messages = document.getElementById("chat-messages");
-    const input = document.getElementById("chat-input");
-    const sendBtn = document.getElementById("chat-send");
+    const fab       = document.getElementById("chat-fab");
+    const panel     = document.getElementById("chat-panel");
+    const closeBtn  = document.getElementById("chat-close");
+    const messages  = document.getElementById("chat-messages");
+    const input     = document.getElementById("chat-input");
+    const sendBtn   = document.getElementById("chat-send");
+    const ctxBadge  = document.getElementById("context-badge");
+
+    // ── Biến ngữ cảnh RAG ──────────────────────────────────────
+    // Được cập nhật bởi Unity C# thông qua ChatBridge.jslib
+    // WebGLChatBridge.cs gọi SetCurrentExhibitId(id) → hàm này chạy
+    window.currentExhibitId = "";
+
+    // Unity có thể gọi hàm này bất cứ lúc nào để cập nhật context
+    window.SetCurrentExhibitId = function(id) {
+      window.currentExhibitId = id || "";
+      // Cập nhật badge hiển thị ngữ cảnh trên header chat
+      if (id) {
+        ctxBadge.textContent = id.replace("Exhibit_", "#");
+        ctxBadge.classList.add("active");
+        ctxBadge.title = "Đang xem: " + id;
+      } else {
+        ctxBadge.textContent = "Chung";
+        ctxBadge.classList.remove("active");
+        ctxBadge.title = "Chưa chọn sự kiện";
+      }
+      console.log("[ChatBridge] Context RAG cập nhật:", id);
+    };
 
     // Toggle panel
     fab.addEventListener("click", () => panel.classList.toggle("open"));
@@ -380,7 +321,7 @@
       const text = input.value.trim();
       if (!text) return;
 
-      // Hide suggestions after first message
+      // Ẩn gợi ý sau lần hỏi đầu tiên
       const suggestions = document.querySelector(".chat-suggestions");
       if (suggestions) suggestions.remove();
 
@@ -399,10 +340,20 @@
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text })
+          body: JSON.stringify({
+            message: text,
+            // ✅ Truyền ngữ cảnh RAG: ID sự kiện Unity đang xem
+            currentExhibitId: window.currentExhibitId || ""
+          })
         });
         const data = await res.json();
         typing.remove();
+
+        // Log thông tin RAG để debug (xem trong DevTools)
+        if (data.rag) {
+          console.log("[RAG] Tài liệu truy xuất:", data.rag.retrievedIds, "| Điểm:", data.rag.retrievedCount);
+        }
+
         addMsg(data.reply || "Xin lỗi, tôi không thể trả lời lúc này.", "bot");
       } catch {
         typing.remove();
