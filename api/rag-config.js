@@ -24,7 +24,7 @@ export const RAG_CONFIG = {
   GENERATION_MODEL: "gemini-2.5-flash",
 
   // Số token tối đa cho câu trả lời (Tăng lên 1024 để tránh bị ngắt nửa câu)
-  MAX_OUTPUT_TOKENS: 1500,
+  MAX_OUTPUT_TOKENS: 4000,
 
   // Độ sáng tạo của AI (0 = chính xác, 1 = sáng tạo)
   TEMPERATURE: 0.4,
