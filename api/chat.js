@@ -133,7 +133,7 @@ async function retrieveTopK(question, exhibits, currentExhibitId, apiKey) {
 // ----------------------------------------------------------------
 // 4. XÂY DỰNG PROMPT TỪ KẾT QUẢ RAG
 // ----------------------------------------------------------------
-function buildRAGPrompt(question, retrievedExhibits, companyName) {
+function buildRAGPrompt(question, retrievedExhibits, companyName, allExhibits) {
     const contextDocs = retrievedExhibits.map((e, i) => {
         const pages = (e.pages ?? [])
             .map(p => `  [Trang: ${p.title ?? ""}] ${p.description ?? ""}`)
@@ -143,6 +143,24 @@ Mô tả: ${e.description ?? "Chưa có mô tả"}
 ${pages}`;
     }).join("\n\n");
 
+    // Tạo danh sách tổng quan tất cả hiện vật (để bot biết số lượng và tên các tác phẩm khác)
+    let globalContext = "";      
+    if (allExhibits && allExhibits.length > 0) {
+        const list = allExhibits.map((e, i) => {
+            // Gom các trường phân loại lại với nhau
+            const tagsArr = [];
+            if (e.tags) {
+                if (Array.isArray(e.tags)) tagsArr.push(...e.tags);
+                else tagsArr.push(e.tags);
+            }
+
+            const tagsString = tagsArr.filter(Boolean).join(", ");
+            const tagInfo = tagsString ? ` [Thể loại/Tag: ${tagsString}]` : "";
+            return `${i + 1}. ${e.name}${tagInfo}`;
+        }).join("\n");
+        globalContext = `\nTHÔNG TIN TỔNG QUAN VỀ TRIỂN LÃM:\nTriển lãm hiện có tổng cộng ${allExhibits.length} hiện vật/tác phẩm. Danh sách sơ lược:\n${list}\n`;
+    }
+    
     return `Bạn là Tư vấn viên ảo chuyên nghiệp của ${companyName ?? "Triển lãm"}.
 Nhiệm vụ: TRẢ LỜI TRỰC TIẾP câu hỏi dựa HOÀN TOÀN vào TÀI LIỆU bên dưới.
 
@@ -151,9 +169,9 @@ QUY TẮC:
 - Trả lời NGẮN GỌN (tối đa 3-4 câu), bám sát tài liệu
 - Nếu tài liệu không có thông tin, nói: "Tôi chưa có thông tin cụ thể về vấn đề này."
 - Dùng tiếng Việt, giọng văn chuyên nghiệp và thân thiện
-
-TÀI LIỆU LIÊN QUAN (được truy xuất tự động bằng AI Embedding):
-${contextDocs || "Không tìm thấy tài liệu liên quan trong cơ sở dữ liệu."}
+${globalContext}
+TÀI LIỆU CHI TIẾT (được truy xuất tự động bởi hệ thống RAG):
+${contextDocs || "Không tìm thấy tài liệu chi tiết liên quan."}
 
 CÂU HỎI: ${question}
 
@@ -229,7 +247,7 @@ export default async function handler(req, res) {
         // ----------------------------------------------------------
         // BƯỚC 3: Xây dựng RAG Prompt và gọi Gemini
         // ----------------------------------------------------------
-        const prompt = buildRAGPrompt(message, retrievedExhibits, companyName);
+        const prompt = buildRAGPrompt(message, retrievedExhibits, companyName, exhibits);
 
         let geminiData = null;
         const maxRetries = 3; // Thử lại tối đa 3 lần nếu gặp 503
