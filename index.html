@@ -293,8 +293,21 @@
     };
 
     // Toggle panel
-    fab.addEventListener("click", () => panel.classList.toggle("open"));
-    closeBtn.addEventListener("click", () => panel.classList.remove("open"));
+    fab.addEventListener("click", () => {
+      panel.classList.toggle("open");
+      if (panel.classList.contains("open")) {
+        // Mở chat → focus input, canvas mất focus → Unity không nhận phím
+        setTimeout(() => input.focus(), 100);
+      } else {
+        // Đóng chat → trả focus lại canvas → Unity nhận phím bình thường
+        canvas.focus();
+      }
+    });
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+      // Trả focus lại canvas khi đóng chat
+      canvas.focus();
+    });
 
     // Suggestion chips
     document.querySelectorAll(".suggestion").forEach(chip => {
@@ -309,23 +322,27 @@
     sendBtn.addEventListener("click", sendMessage);
 
     // ── Chặn Unity bắt keyboard khi chat đang focus ──────────────────────
-    // Khi input được focus: báo Unity ngừng xử lý phím tắt (A/D/Tab/...)
-    // Khi input blur (mất focus): trả quyền điều khiển lại cho Unity
+    // WebGLInput.captureAllKeyboardInput = false (set từ C#) đảm bảo Unity
+    // chỉ nhận keyboard khi canvas có focus. Khi HTML input có focus, canvas
+    // tự động mất focus → Unity không bắt phím.
+    //
+    // Các listener dưới đây là lớp bảo vệ BỔ SUNG phòng trường hợp edge case.
     window.chatInputActive = false;
 
     input.addEventListener("focus", () => {
       window.chatInputActive = true;
-      console.log("[ChatBridge] Chat input active — Unity keyboard blocked.");
+      // Đảm bảo canvas THẬT SỰ mất focus
+      canvas.blur();
     });
 
     input.addEventListener("blur", () => {
       window.chatInputActive = false;
-      console.log("[ChatBridge] Chat input inactive — Unity keyboard restored.");
     });
 
     // Chặn sự kiện keyboard lan ra ngoài input (phòng ngừa thêm)
-    input.addEventListener("keydown", e => e.stopPropagation());
-    input.addEventListener("keyup",   e => e.stopPropagation());
+    input.addEventListener("keydown",  e => e.stopPropagation());
+    input.addEventListener("keyup",    e => e.stopPropagation());
+    input.addEventListener("keypress", e => e.stopPropagation());
 
     function addMsg(text, role) {
       const div = document.createElement("div");
