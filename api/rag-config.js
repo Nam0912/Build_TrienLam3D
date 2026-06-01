@@ -21,7 +21,7 @@ export const RAG_CONFIG = {
   EMBEDDING_MODEL: "text-embedding-004",
 
   // Model LLM để sinh câu trả lời cuối cùng (Khuyến nghị: gemini-1.5-flash ổn định hơn và ít bị 503)
-  GENERATION_MODEL: "gemini-2.0-flash-001",
+  GENERATION_MODEL: "gemini-2.5-pro",
 
   // Số token tối đa cho câu trả lời (Tăng lên 1024 để tránh bị ngắt nửa câu)
   MAX_OUTPUT_TOKENS: 4000,
