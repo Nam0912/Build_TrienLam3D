@@ -387,7 +387,7 @@
 
         // Log thông tin RAG để debug (xem trong DevTools)
         if (data.rag) {
-          console.log("[RAG] Tài liệu truy xuất:", data.rag.retrievedIds, "| Điểm:", data.rag.retrievedCount);
+          console.log(`[RAG] Model: ${data.rag.modelUsed} | Tài liệu truy xuất:`, data.rag.retrievedIds, "| Điểm:", data.rag.retrievedCount);
         }
 
         addMsg(data.reply || "Xin lỗi, tôi không thể trả lời lúc này.", "bot");
