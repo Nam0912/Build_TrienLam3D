@@ -1,24 +1,25 @@
 {
-  "museumName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
-  "version": "2.0.18",
-  "lastUpdated": "2026-05-24",
+  "companyName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
+  "version": "2.0.41",
+  "lastUpdated": "2026-06-08",
   "exhibits": [
     {
       "id": "Exhibit_1",
       "order": 1,
       "isPublished": true,
       "category": "Tranh Sơn Mài",
-      "name": "Bình Phong Thiếu nữ trong vướn - Phong cảnh",
+      "name": "Bình Phong Thiếu nữ trong vườn - Phong cảnh",
       "description": "“Bình phong” là một trong những tác phẩm sơn mài quan trọng nhất của Nguyễn Gia Trí giai đoạn trước Cách mạng tháng Tám. Tác phẩm được sáng tác trong thời kỳ mỹ thuật Đông Dương phát triển mạnh, khi nhiều họa sĩ Việt Nam bắt đầu thử nghiệm việc kết hợp kỹ thuật hội họa phương Tây với vật liệu truyền thống Việt Nam.\n- Mặt 1: “Thiếu nữ trong vườn” có bố cục nhẹ nhàng, thanh thoát, khung cảnh phủ sắc vàng đặc trưng của sơn mài Nguyễn Gia Trí với 7 nhân vật nữ ở các độ tuổi khác nhau được xem như biểu tượng cho các giai đoạn cuộc đời người phụ nữ.\n- Mặt 2: “Phong cảnh” diễn tả khu vườn nhiệt đới Việt Nam với họa tiết sáng trên nền sẫm, bút pháp khoẻ khoắn, mạch lạc, giàu tính trang trí.\nBình phong là sự kết hợp hài hòa giữa lối tạo hình hiện đại phương Tây với nghệ thuật truyền thống. Kỹ thuật khắc, đắp nổi, dát vàng, mài được thực hiện nhuần nhuyễn, tạo nên hiệu quả tả chất tuyệt vời. Đặc biệt, kỹ thuật gắn trứng điêu luyện của họa sĩ khiến vỏ trứng khô cứng biến hoá thành hiệu ứng mềm mại, sống động, tạo độ chuyển sắc và chiều sâu hiếm thấy trong sơn mài thời kỳ đó.\nTác phẩm đánh dấu quá trình hiện đại hóa hội họa Việt Nam đầu thế kỷ XX, việc sơn mài chuyển từ nghề thủ công trang trí thành nghệ thuật hàn lâm cùng với sự hình thành phong cách riêng của Nguyễn Gia Trí — người được xem là “cha đẻ của sơn mài hiện đại Việt Nam”.\n“Bình phong” cũng là tiền đề cho các kiệt tác sau này như:\n- “Vườn xuân Trung Nam Bắc”\n- Các bộ tranh thiếu nữ sơn mài nổi tiếng khác của Nguyễn Gia Trí.\nTác phẩm được công nhận Bảo vật quốc gia của Việt Nam vào năm 2017.",
       "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/binhphong_xtobk2.png",
       "subImages": [
         "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779459140/images849408_nguyen_gia_triportrait_thumb_1__yilrqj.jpg"
       ],
       "audioUrl": "",
-      "actionUrl": "https://forms.gle/exExExSampleForm",
       "tags": [
-        "Tranh sơn dầu",
-        "Nguyễn Gia Trí"
+        "Nguyễn Gia Trí",
+        "1939",
+        "Sơn Mài",
+        "Bảo vật Quốc gia năm 2017"
       ],
       "yearRange": {
         "from": 1939,
@@ -39,11 +40,10 @@
       ],
       "audioUrl": "",
       "tags": [
-        "Em Thúy",
         "Trần Văn Cẩn",
-        "Tranh sơn dầu",
         "1943",
-        "Bảo vật quốc gia"
+        "Sơn Dầu",
+        "Bảo vật Quốc gia năm 2013"
       ],
       "yearRange": {
         "from": 1943,
@@ -64,12 +64,11 @@
       ],
       "audioUrl": "",
       "tags": [
-        "Vườn xuân Trung Nam Bắc",
         "Nguyễn Gia Trí",
-        "Tranh sơn mài",
         "1969",
         "1989",
-        "Bảo vật quốc gia"
+        "Sơn Mài",
+        "Bảo vật Quốc gia năm 2013"
       ],
       "yearRange": {
         "from": 1969,
@@ -90,11 +89,11 @@
       ],
       "audioUrl": "",
       "tags": [
-        "Kết nạp Đảng ở Điện Biên Phủ",
         "Nguyễn Sáng",
         "Tranh sơn mài",
         "1956",
-        "Điện Biên Phủ"
+        "Sơn Mài",
+        "Bảo vật Quốc gia năm 2013"
       ],
       "yearRange": {
         "from": 1956,
@@ -115,11 +114,10 @@
       ],
       "audioUrl": "",
       "tags": [
-        "Hai thiếu nữ và em bé",
         "Tô Ngọc Vân",
-        "Tranh sơn dầu",
         "1944",
-        "Bảo vật quốc gia"
+        "Sơn Dầu",
+        "Bảo vật Quốc gia năm 2013"
       ],
       "yearRange": {
         "from": 1944,
@@ -140,11 +138,13 @@
       ],
       "pages": [],
       "yearRange": {
-        "from": 1990,
-        "to": 1990
+        "from": 1970,
+        "to": 1970
       },
       "tags": [
-        "Sơn mài"
+        "Sơn mài",
+        "1970",
+        "Bảo vật Quốc gia năm 2018"
       ]
     },
     {
@@ -158,12 +158,15 @@
       "subImages": [],
       "pages": [],
       "yearRange": {
-        "from": 1700,
-        "to": 1700
+        "from": 1501,
+        "to": 1600
       },
       "tags": [
         "Thế kỷ 16",
-        "Gỗ phủ sơn"
+        "Gỗ phủ sơn",
+        "1501",
+        "1600",
+        "Bảo vật quốc gia năm 2013"
       ]
     },
     {
@@ -178,11 +181,14 @@
       "pages": [],
       "yearRange": {
         "from": 1701,
-        "to": 1701
+        "to": 1800
       },
       "tags": [
         "Thế kỷ 17",
-        "Gỗ phủ sơn"
+        "Gỗ phủ sơn",
+        "1701",
+        "1800",
+        "Bảo vật Quốc gia năm 2015"
       ]
     },
     {
@@ -195,10 +201,14 @@
       "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1779436034/canhcuachamrong_pd2jd9.png",
       "subImages": [],
       "pages": [],
-      "yearRange": null,
+      "yearRange": {
+        "from": 1650,
+        "to": 1750
+      },
       "tags": [
         "Gỗ",
-        "Thế kỷ 17"
+        "Thế kỷ 17",
+        "Bảo vật Quốc gia năm 2017"
       ]
     },
     {
@@ -219,7 +229,9 @@
       },
       "tags": [
         "1980",
-        "Tranh Sơn mài"
+        "Sơn mài",
+        "Dương Bích Liên",
+        "Bảo vật Quốc gia năm 2021"
       ]
     },
     {

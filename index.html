@@ -18,6 +18,7 @@
 
     #unity-canvas { width: 100vw; height: 100vh; display: block; }
 
+    /* ===== LOADING ===== */
     #loading-overlay {
       position: fixed; inset: 0;
       background: #12100D;
@@ -88,6 +89,7 @@
     }
     #chat-panel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
 
+    /* Header */
     #chat-header {
       padding: 13px 16px;
       background: #12100D;
@@ -186,8 +188,10 @@
 
 <body>
 
+  <!-- Unity Canvas -->
   <canvas id="unity-canvas" tabindex="-1"></canvas>
 
+  <!-- Loading Overlay -->
   <div id="loading-overlay">
     <div id="loading-title">🏛️ TRIỂN LÃM MỸ THUẬT 3D</div>
     <div id="loading-sub">Đang tải không gian triển lãm...</div>
@@ -197,6 +201,7 @@
     <div id="loading-pct">0%</div>
   </div>
 
+  <!-- Chat Widget -->
   <button id="chat-fab" title="Hỏi hướng dẫn viên ảo">💬</button>
 
   <div id="chat-panel">
@@ -206,6 +211,7 @@
         <div class="title">Tư Vấn Viên Ảo</div>
         <div class="sub">Được hỗ trợ bởi Gemini AI + RAG</div>
       </div>
+      <!-- Badge hiển thị sự kiện đang xem (cập nhật tự động từ Unity) -->
       <span id="context-badge" title="Đang xem sự kiện này">Chung</span>
       <button id="chat-close">✕</button>
     </div>
@@ -224,6 +230,7 @@
     </div>
   </div>
 
+  <!-- Unity WebGL Loader -->
   <script src="Build/DoAnTN_Build.loader.js"></script>
   <script>
     const canvas = document.getElementById("unity-canvas");
@@ -255,6 +262,8 @@
     const input     = document.getElementById("chat-input");
     const sendBtn   = document.getElementById("chat-send");
     const ctxBadge  = document.getElementById("context-badge");
+    
+    const conversationHistory = [];
 
     window.currentExhibitId = "";
 
@@ -294,7 +303,7 @@
 
     input.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) sendMessage(); });
     sendBtn.addEventListener("click", sendMessage);
-    
+
     window.chatInputActive = false;
 
     input.addEventListener("focus", () => {
@@ -330,6 +339,8 @@
       input.value = "";
       sendBtn.disabled = true;
 
+      conversationHistory.push({ role: "user", text: text });
+
       const typing = document.createElement("div");
       typing.className = "msg bot typing";
       typing.innerHTML = '<span class="typing-dots">Đang trả lời</span>';
@@ -342,17 +353,25 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             message: text,
-            currentExhibitId: window.currentExhibitId || ""
+            currentExhibitId: window.currentExhibitId || "",
+            history: conversationHistory.slice(-6)
           })
         });
         const data = await res.json();
         typing.remove();
 
         if (data.rag) {
-          console.log(`[RAG] Model: ${data.rag.modelUsed} | Tài liệu truy xuất:`, data.rag.retrievedIds, "| Điểm:", data.rag.retrievedCount);
+          console.log(`[RAG] Intent: ${data.rag.intent} | Model: ${data.rag.modelUsed} | Tài liệu:`, data.rag.retrievedIds, "| Fallback:", data.rag.fallbackLevel);
         }
 
-        addMsg(data.reply || "Xin lỗi, tôi không thể trả lời lúc này.", "bot");
+        const botReply = data.reply || "Xin lỗi, tôi không thể trả lời lúc này.";
+        addMsg(botReply, "bot");
+
+        conversationHistory.push({ role: "model", text: botReply });
+
+        while (conversationHistory.length > 6) {
+          conversationHistory.shift();
+        }
       } catch {
         typing.remove();
         addMsg("Lỗi kết nối. Vui lòng thử lại sau.", "bot");
