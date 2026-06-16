@@ -1,7 +1,7 @@
 {
-  "companyName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
-  "version": "2.0.41",
-  "lastUpdated": "2026-06-08",
+  "museumName": "Triển Lãm Mỹ Thuật Việt Nam 3D",
+  "version": "2.0.44",
+  "lastUpdated": "2026-06-16",
   "exhibits": [
     {
       "id": "Exhibit_1",
@@ -237,7 +237,7 @@
     {
       "id": "Exhibit_11",
       "order": 11,
-      "isPublished": true,
+      "isPublished": false,
       "category": "Tranh Sơn Mài",
       "name": "Thanh niên Thành đồng",
       "description": "“Thanh niên Thành đồng” là tác phẩm sơn mài của Nguyễn Sáng được sáng tác năm 1978, sau khi chiến tranh Việt Nam kết thúc. Tác phẩm phản ánh hình ảnh thanh niên miền Nam trong thời kỳ kháng chiến chống Mỹ, gắn với khái niệm “Thành đồng Tổ quốc” — cách gọi biểu tượng dành cho miền Nam Việt Nam trong giai đoạn chiến tranh. Tác phẩm được công nhận là Bảo vật Quốc gia năm 2017 và hiện được lưu giữ tại Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh.\nBức tranh được xây dựng theo bố cục nhóm nhân vật với các thanh niên đứng sát nhau trong một không gian khái quát. Nguyễn Sáng không tập trung mô tả bối cảnh cụ thể mà nhấn mạnh vào hình khối nhân vật và nhịp điệu tổng thể của bố cục. Các nhân vật được tạo bằng những mảng lớn, đường nét chắc và ít chi tiết nhỏ.\nTác phẩm sử dụng gam màu trầm đặc trưng của sơn mài như đen, nâu, đỏ son và vàng. Ánh sáng không được xử lý theo hướng tự nhiên mà chủ yếu xuất hiện dưới dạng các mảng tương phản giữa sáng và tối để làm rõ cấu trúc hình thể. Điều này giúp tăng tính khái quát và sự ổn định của bố cục.\nVề kỹ thuật, Nguyễn Sáng sử dụng chất liệu sơn mài truyền thống nhưng khai thác theo hướng hội họa hiện đại. Các lớp sơn được mài để tạo độ sâu màu sắc và hiệu ứng bề mặt. Thay vì tập trung vào yếu tố trang trí như sơn mài cổ truyền, tác phẩm hướng đến biểu đạt cảm xúc và cấu trúc tạo hình.\nMột giá trị nghệ thuật quan trọng của “Thanh niên Thành đồng” là cách giản lược hình thể. Nhân vật không được diễn tả chi tiết về giải phẫu hay trang phục mà được khái quát thành các khối lớn có nhịp điệu liên kết với nhau. Cách xử lý này giúp tác phẩm có tính biểu tượng cao và tạo cảm giác tập thể thay vì nhấn mạnh từng cá nhân riêng lẻ.\nTác phẩm cũng phản ánh xu hướng của mỹ thuật Việt Nam giai đoạn sau chiến tranh, khi nhiều họa sĩ tập trung khai thác đề tài lịch sử và con người trong kháng chiến. Tuy nhiên, Nguyễn Sáng không tiếp cận theo hướng minh họa hiện thực đơn thuần mà sử dụng ngôn ngữ tạo hình mang tính hiện đại, đặc biệt trong cách tổ chức mảng và xử lý chất liệu sơn mài.\nTrong lịch sử mỹ thuật Việt Nam hiện đại, “Thanh niên Thành đồng” được xem là một trong những tác phẩm tiêu biểu của sơn mài cách mạng sau năm 1975, đồng thời thể hiện rõ phong cách tạo hình mạnh và khái quát của Nguyễn Sáng trong giai đoạn cuối sự nghiệp.",
@@ -253,6 +253,26 @@
       "tags": [
         "Tranh Sơn Mài",
         "Nguyễn Sáng"
+      ],
+      "actionUrl": ""
+    },
+    {
+      "id": "Exhibit_12",
+      "order": 12,
+      "isPublished": true,
+      "category": "Tranh Sơn Dầu",
+      "name": "UTC",
+      "description": "logo utc",
+      "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1781599140/logoutc_sxb6yn.jpg",
+      "actionUrl": "",
+      "subImages": [],
+      "pages": [],
+      "yearRange": {
+        "from": 2026,
+        "to": 2026
+      },
+      "tags": [
+        "utc"
       ]
     }
   ]
