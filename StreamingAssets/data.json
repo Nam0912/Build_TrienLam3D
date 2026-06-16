@@ -259,8 +259,8 @@
     {
       "id": "Exhibit_12",
       "order": 12,
-      "isPublished": true,
-      "category": "",
+      "isPublished": false,
+      "category": "Ảnh",
       "name": "UTC",
       "description": "",
       "imageUrl": "https://res.cloudinary.com/duo8ehnzi/image/upload/w_1024,q_auto,f_auto/v1781599140/logoutc_sxb6yn.jpg",
